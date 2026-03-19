@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000002557a5ef4513a554ab38927895ea9df271850720
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -518,8 +518,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 537363825
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1405,8 +1405,8 @@ Canvas:
   m_GameObject: {fileID: 1273781135}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1416,7 +1416,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -274376923
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1273781140
@@ -1804,11 +1804,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3610900074328640361, guid: 70391d4a84204a3468e030a2b66f2af1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.03
+      value: -2.18
       objectReference: {fileID: 0}
     - target: {fileID: 3610900074328640361, guid: 70391d4a84204a3468e030a2b66f2af1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 3610900074328640361, guid: 70391d4a84204a3468e030a2b66f2af1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2284,6 +2284,14 @@ PrefabInstance:
     - target: {fileID: 1310443746926738313, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761508694839617406, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761508694839617406, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -224531819
       objectReference: {fileID: 0}
     - target: {fileID: 4909719117465325344, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: m_Name
