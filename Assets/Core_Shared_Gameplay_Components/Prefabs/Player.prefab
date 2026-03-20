@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 5634976150070797071}
   m_Layer: 12
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,13 +248,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMoveSpeed: 7
-  acceleration: 60
-  deceleration: 80
+  acceleration: 200
+  deceleration: 250
   jumpVelocity: 9.6
   coyoteTime: 0.1
   jumpBufferTime: 0.1
-  jumpCutGravityMultiplier: 5
-  fallGravityMultiplier: 1.5
+  jumpCutGravityMultiplier: 2
+  fallGravityMultiplier: 2.5
 --- !u!114 &7057092321802432080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d976e891d41026428df822d46cf4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLives: 3
+  startingLives: 100
   currentLives: 0
   isDead: 0
   isInvulnerable: 0
