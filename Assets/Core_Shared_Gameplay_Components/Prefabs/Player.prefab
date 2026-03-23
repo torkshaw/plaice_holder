@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1310443746926738313}
   - component: {fileID: 4890738608822975886}
   - component: {fileID: 6044905091822311329}
-  - component: {fileID: 7189312561715106388}
+  - component: {fileID: 4145262669597518755}
   - component: {fileID: 7057092321802432080}
   - component: {fileID: 5993196624989924944}
   - component: {fileID: 2470288978563058059}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e550fee2c04a2240959dace8d8f6239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7189312561715106388
+--- !u!114 &4145262669597518755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,13 +244,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4909719117465325344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26791efbd15d61745a0f37d9d38a3bba, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ed3cd7c05b1495419958f33d6ef7060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMoveSpeed: 7
-  acceleration: 200
-  deceleration: 250
-  jumpVelocity: 9.6
+  maxMoveSpeed: 8
+  acceleration: 60
+  deceleration: 80
+  jumpVelocity: 14
   coyoteTime: 0.1
   jumpBufferTime: 0.1
   jumpCutGravityMultiplier: 2

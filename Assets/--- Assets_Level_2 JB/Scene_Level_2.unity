@@ -2087,6 +2087,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1375933751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4909719117465325344, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+  m_PrefabInstance: {fileID: 7842784832116516862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1442948680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,12 +2620,36 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7057092321802432080, guid: 10c7691100de0fa428010c70c4295997, type: 3}
   m_PrefabInstance: {fileID: 7842784832116516862}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1375933751}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d976e891d41026428df822d46cf4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2050627061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375933751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db57e4dd45c5b444ab08a1cd642fa8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMoveSpeed: 8
+  acceleration: 250
+  deceleration: 350
+  airControlMultiplier: 0.3
+  jumpVelocity: 14
+  coyoteTime: 0.15
+  jumpBufferTime: 0.15
+  jumpCutGravityMultiplier: 3.5
+  fallGravityMultiplier: 4
+  apexThreshold: 2
+  apexGravityMultiplier: 1.5
+  maxFallSpeed: -20
 --- !u!1 &2132322823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,22 +2834,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4909719117465325344, guid: 10c7691100de0fa428010c70c4295997, type: 3}
-      propertyPath: m_Name
-      value: Player
+    - target: {fileID: 4145262669597518755, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      propertyPath: jumpVelocity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145262669597518755, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      propertyPath: jumpCutGravityMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4909719117465325344, guid: 10c7691100de0fa428010c70c4295997, type: 3}
-      propertyPath: m_TagString
+      propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5747461653587202446, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4145262669597518755, guid: 10c7691100de0fa428010c70c4295997, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4909719117465325344, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2050627061}
   m_SourcePrefab: {fileID: 100100000, guid: 10c7691100de0fa428010c70c4295997, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
