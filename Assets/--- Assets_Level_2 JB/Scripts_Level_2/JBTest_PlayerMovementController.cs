@@ -28,8 +28,10 @@ public class JBTest_PlayerMovementController : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.1f; // how long a 'jump' command can be remembered before landing/being fired
     [SerializeField] private float jumpCutGravityMultiplier = 2f; // how much extra gravity to apply when jump is released
     [SerializeField] private float fallGravityMultiplier = 2.5f; // how much extra gravity to apply when the player is falling
-    [SerializeField] private float apexThreshold = 2f; // Adds hangtime to avoid "floatiness" by reducing gravity in jump apex - JasonB
-    [SerializeField] private float apexGravityMultiplier = 0.4f;
+    [SerializeField] private float apexThreshold = 2f; // apexGravity multiplier only takes effect after the player reaches this velocity - JasonB
+                                                      // Essentially, the greater this number - the floatier the hang time is. Mess around with it! - JasonB
+    [SerializeField] private float apexGravityMultiplier = 0.4f;  // This basically reserves momentum upwards when the jump button is released near the apex of each jump - JasonB
+                                                                 //This greatly aids "game feel" and makes the player feel more real within the physics space - Jason B
     [SerializeField] private float maxFallSpeed = -20f; // Clamp fall speed - useful for longer drops - JasonB
 
     // declare these (private) variables for use in the script
@@ -222,13 +224,13 @@ public class JBTest_PlayerMovementController : MonoBehaviour
 
     } // end ApplyGravityModifiers
 
-    private void ApplyApexModifier()
+    private void ApplyApexModifier() // Adds an upward nudge at the apex of jumping, helps gravity feel "real".
     {
-        Vector2 velocity = rb.linearVelocity;
+        Vector2 velocity = rb.linearVelocity; // Get players current velocity and assigns to local variable - JasonB
 
-        float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime;
-        velocity.y -= apexCounterGravity;
-        rb.linearVelocity = velocity;
+        float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime; // Cancels out the gravity multiplier, reducing the pull of gravity at the apex of the jump  -JasonB
+        velocity.y -= apexCounterGravity; // Applies to the players y velocity variable - JasonB
+        rb.linearVelocity = velocity; // Applies to the rigidbody velocity to actually apply the movement - JasonB
     }
 
 } // end class
