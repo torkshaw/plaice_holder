@@ -113,8 +113,8 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         float currentSpeed = rb.linearVelocity.x - platformVelocityX; // we also need to capturethe players current speed so we can then move them towards their max speed (the new variable)
                                                                       // this line pulls the linearvelocity.x (horizontal movememnt speed) from the attached rb (rigidbody) and slaps it into currentSpeed
 
-        float controlMultiplier = groundDetector.IsGrounded ? 1f : airControlMultiplier; // Added airControlMultiplier - integrated within code below for accel and decel on ternary operator - JasonB
-                                                                                        // This will decrease the amount of control the player has in the air - preventing unintended jumping behaviour - JasonB
+        float controlMultiplier = groundDetector.IsGrounded ? 1f : airControlMultiplier; // Added airControlMultiplier - integrated within code below for accel and decel on ternary operator - Jason
+                                                                                        // This will decrease the amount of control the player has in the air - preventing unintended jumping behaviour - Jason
 
         float accelRate = (moveInput != 0 ? acceleration : deceleration) * controlMultiplier; // here we're creating the accelRate variable but it is going to be both accel an decel, in practice-
                                                                         // we're using that ternary operator to choose between two possible variables; acceleration and deceleration
@@ -201,7 +201,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
                                                                                                            // this is stored as the variable 'extraGravity'
             velocity.y += extraGravity; // then we set the y velocity to itself PLUS that extraGravity. the "+=" here is a shorthand for "x = (becomes) x + y". where x is the stuff before the operator and y is the stuff after
 
-            velocity.y = Mathf.Max(velocity.y, maxFallSpeed); // Clamps fall speed to prevent player falling too fast - JasonB
+            velocity.y = Mathf.Max(velocity.y, maxFallSpeed); // Clamps fall speed to prevent player falling too fast - Jason
 
             rb.linearVelocity = velocity; // then we write that back to the rb.linearVelocity. much as we did with the movement above.
 
@@ -224,14 +224,21 @@ public class JBTest_PlayerMovementController : MonoBehaviour
 
     } // end ApplyGravityModifiers
 
-    private void ApplyApexModifier() // Adds an upward nudge at the apex of jumping, helps gravity feel "real".
+    private void ApplyApexModifier() // Adds an upward nudge at the apex of jumping, helps gravity feel "real". - Jason
     {
-        Vector2 velocity = rb.linearVelocity; // Get players current velocity and assigns to local variable - JasonB
+        if (!groundDetector.IsGrounded && Mathf.Abs(rb.linearVelocity.y) < apexThreshold)
+        {
 
-        float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime; // Cancels out the gravity multiplier, reducing the pull of gravity at the apex of the jump  -JasonB
-        velocity.y -= apexCounterGravity; // Applies to the players y velocity variable - JasonB
-        rb.linearVelocity = velocity; // Applies to the rigidbody velocity to actually apply the movement - JasonB
+
+            Vector2 velocity = rb.linearVelocity; // Get players current velocity and assigns to local variable - Jason
+
+            float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime; // Cancels out the gravity multiplier, reducing the pull of gravity at the apex of the jump  -Jason
+            velocity.y -= apexCounterGravity; // Applies to the players y velocity variable - Jason
+            rb.linearVelocity = velocity; // Applies to the rigidbody velocity to actually apply the movement - Jason
+        }
     }
+
+    
 
 } // end class
 
