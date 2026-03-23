@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2291223503017224718}
   - component: {fileID: 4371100375806685570}
   m_Layer: 8
-  m_Name: Movable_Platform_Level_2
+  m_Name: Movable_RailsPlatform_Level_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,13 +137,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachPoint: {fileID: 8625963759645306755}
   pullSpeed: 3
-  pullStopDistance: 1.6
   platformType: 2
   returnSpeed: 2
+  playerPullStopZone: {fileID: 0}
+  platformExclusionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  platformBlockMask:
+    serializedVersion: 2
+    m_Bits: 0
   patrolDirection: {x: 1, y: 0}
   patrolDistance: 3
   patrolSpeed: 1.5
-  useRailConstraint: 0
+  useRailConstraint: 1
   railDirection: 1
   railDistance: 3
   railLineRenderer: {fileID: 7646628691423474678}
