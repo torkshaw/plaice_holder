@@ -13,6 +13,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
     private PlayerInputReader inputReader;
     private PlayerGroundDetector groundDetector;
     private PlayerRespawnController respawnController;
+    private PlayerWallDetector wallDetector;
 
     // Serialized Fields - Inspector variables
 
@@ -20,7 +21,8 @@ public class JBTest_PlayerMovementController : MonoBehaviour
     [SerializeField] private float maxMoveSpeed = 8f;
     [SerializeField] private float acceleration = 60f;
     [SerializeField] private float deceleration = 80f;
-    [SerializeField] private float airControlMultiplier = 0.6f; // cuts player movement control while in the air - JasonB 
+    [SerializeField] private float airControlMultiplier = 0.6f; // cuts player movement control while in the air - JasonB
+                                                                //This is a perecentage i.e 0.6 gives the player 60% air control power - Jason
 
     [Header("Jump")]    // serieliazed fields we can use to adjust Jump feel in the inspector
     [SerializeField] private float jumpVelocity = 14f; // the speed at which a player is sent vertical. this replaced the 'force' system in the prototytpe so we can be more accurate.
@@ -52,6 +54,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         inputReader = GetComponent<PlayerInputReader>();
         groundDetector = GetComponent<PlayerGroundDetector>();
         respawnController = GetComponent<PlayerRespawnController>();
+        wallDetector = GetComponent<PlayerWallDetector>();
     }
 
 
@@ -76,6 +79,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         HandleJump(); // calling the jump function from below
         ApplyGravityModifiers(); // this little funciton will do jump-cut and extra gravity for falling
         ApplyApexModifier(); // runs function for Gravity changes at apex of jump - JasonB
+        HandleWallCollision();
     } // end fixedupdate
 
 
@@ -238,7 +242,20 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         }
     }
 
-    
+    private void HandleWallCollision()
+    {
+        if (wallDetector == null) return;
+
+        bool movingIntoLeftWall = wallDetector.isTouchingLeftWall && inputReader.MoveInput < 0f;
+        bool movingIntoRightWall = wallDetector.isTouchingRightWall && inputReader.MoveInput > 0f;
+
+        if ((movingIntoLeftWall || movingIntoRightWall) && rb.linearVelocity.y > 0f && !groundDetector.IsGrounded)
+        {
+            Vector2 velocity = rb.linearVelocity;
+            velocity.y = 0f;
+            rb.linearVelocity = velocity;
+        }
+    }
 
 } // end class
 
