@@ -10,6 +10,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
 
     // these privave fields are going to be storing some of the stuff from the player they are attached to; its rigidbody in rb, details from its inputreader and grounddetector scripts.
     private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private PlayerInputReader inputReader;
     private PlayerGroundDetector groundDetector;
     private PlayerRespawnController respawnController;
@@ -92,6 +93,8 @@ public class JBTest_PlayerMovementController : MonoBehaviour
                                                  // specifically its MoveInput property. we're basically reading that out here from that script. this just tells us direction (-1, 0, or 1)
                                                  // this could jsut be "inputReader.MoveInput" instead of making a new local varibale. but its safer to have it as a new variable.
                                                  // having it as a new varibale also allows us to do stuff with it here. 
+
+        SpriteFlipX(moveInput); // Calls sprite flip based on MoveInput - Jason
 
         // then we want to check if the player is on a platform so we can add any of its movement to the player movement
         float platformVelocityX = 0f; // create this variable
@@ -243,7 +246,18 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         }
     }
 
-    
+
+    private void SpriteFlipX(float moveInput)
+    {
+        if (moveInput > 0.01f) // If input on x is more, uncheck flip X in renderer - Jason
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (moveInput < -0.01f) // If input on x is less, check flip X in renderer - Jason
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
 } // end class
 
 
