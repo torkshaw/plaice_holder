@@ -3682,6 +3682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesText: {fileID: 944016517}
   gameOverPanel: {fileID: 1442948680}
+  player: {fileID: 1375933751}
   playAgainButton: {fileID: 1932763928}
   lifeController: {fileID: 2050627050}
 --- !u!114 &1273781137
