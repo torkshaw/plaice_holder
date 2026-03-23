@@ -87,6 +87,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3670191450668815768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5554533504132254825}
+  m_Layer: 12
+  m_Name: RightWallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5554533504132254825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670191450668815768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0879, y: -0.131, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310443746926738313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3865268882335307093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5434039582575535711}
+  m_Layer: 12
+  m_Name: LeftWallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5434039582575535711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3865268882335307093}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2226, y: -0.112, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310443746926738313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3963508920423624384
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,8 +221,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1310443746926738313}
   - component: {fileID: 4890738608822975886}
+  - component: {fileID: 4199231670947423849}
   - component: {fileID: 6044905091822311329}
-  - component: {fileID: 4145262669597518755}
   - component: {fileID: 7057092321802432080}
   - component: {fileID: 5993196624989924944}
   - component: {fileID: 2470288978563058059}
@@ -194,6 +256,8 @@ Transform:
   - {fileID: 240580266168579764}
   - {fileID: 2896700597184999868}
   - {fileID: 3101968771593475041}
+  - {fileID: 5434039582575535711}
+  - {fileID: 5554533504132254825}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4890738608822975886
@@ -212,7 +276,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 16abefd3ba8b05b4d8c89985e936f6f2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -223,6 +287,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &4199231670947423849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909719117465325344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db57e4dd45c5b444ab08a1cd642fa8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMoveSpeed: 8
+  acceleration: 250
+  deceleration: 350
+  airControlMultiplier: 0.3
+  jumpVelocity: 10
+  coyoteTime: 0.15
+  jumpBufferTime: 0.15
+  jumpCutGravityMultiplier: 6
+  fallGravityMultiplier: 8
+  apexThreshold: 1
+  apexGravityMultiplier: 0.8
+  maxFallSpeed: -20
 --- !u!114 &6044905091822311329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,26 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e550fee2c04a2240959dace8d8f6239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4145262669597518755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909719117465325344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed3cd7c05b1495419958f33d6ef7060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxMoveSpeed: 8
-  acceleration: 60
-  deceleration: 80
-  jumpVelocity: 14
-  coyoteTime: 0.1
-  jumpBufferTime: 0.1
-  jumpCutGravityMultiplier: 2
-  fallGravityMultiplier: 2.5
 --- !u!114 &7057092321802432080
 MonoBehaviour:
   m_ObjectHideFlags: 0
