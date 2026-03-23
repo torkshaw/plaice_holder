@@ -12,8 +12,8 @@ public class PlayerGroundDetector : MonoBehaviour
     // inspector fields
     [SerializeField] private Transform groundCheckPoint; // this is where we'll assign the 'groundcheck' object. the reference to 'transform' means 'grab the location (world transform position) of this thing'
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.6f, 0.1f); // this is a ground check box so we need an X and a Y to define the box
-    [SerializeField] private LayerMask groundLayerMask; // this is how we can specify what layers count as ground. LayerMask is a unity feature that will give a dropdown of layers we have in the project. 
-
+    [SerializeField] private LayerMask groundLayerMask; // this is how we can specify what layers count as ground. LayerMask is a unity feature that will give a dropdown of layers we have in the project
+   
 
     // Functions Start From Here
     // ---------------------------------------------------------------------------------------------------------------------------------- //

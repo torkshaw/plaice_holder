@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInputReader))]
 [RequireComponent(typeof(PlayerGroundDetector))]
 
-public class JBTest_PlayerMovementController : MonoBehaviour
+public class JBTest_V2_PlayerMovementController : MonoBehaviour
 {
 
     // these privave fields are going to be storing some of the stuff from the player they are attached to; its rigidbody in rb, details from its inputreader and grounddetector scripts. - Tork
@@ -27,7 +27,8 @@ public class JBTest_PlayerMovementController : MonoBehaviour
   
 
     [Header("Jump")]    // serieliazed fields we can use to adjust Jump feel in the inspector - Tork
-    [SerializeField] private float jumpVelocity = 14f; // the speed at which a player is sent vertical. this replaced the 'force' system in the prototytpe so we can be more accurate. - Tork
+    [SerializeField] private float jumpHeight = 3f; // Jump height to determine height only - Jason
+    [SerializeField] private float timeToApex = 0.35f; // Seconds to reach max Jump Height - Jason
     [SerializeField] private float coyoteTime = 0.15f; // how long the player can jump when they have left a surface - Tork
     [SerializeField] private float jumpBufferTime = 0.1f; // how long a 'jump' command can be remembered before landing/being fired - Tork
     [SerializeField] private float jumpCutGravityMultiplier = 2f; // how much extra gravity to apply when jump is released - Tork
@@ -35,17 +36,16 @@ public class JBTest_PlayerMovementController : MonoBehaviour
     [SerializeField] private float apexThreshold = 2f; // Threshold for enabling hang time, lower the number = earlier in the jump hang time enables - Jason                         
     [SerializeField] private float apexGravityMultiplier = 0.4f;  // This cuts gravity at the apex of a jump, so when you are at/near the peak of your jump, gravity isn't a strong. Smaller number = More hangtime - Jason
     [SerializeField] private float maxFallSpeed = -20f; // Clamp fall speed - useful for longer drops - Jason
-    [SerializeField] private float ascendingGravityMultiplier = 1.5f; // Used to fine tune time it takes to reach the apex of a jump - Jason
-                                                                      // Changing this means changing jump velocity to compensate - the more ascending gravity, the more jump velocity needed to reach intended height
-                                                                      // The gravity multiplier allows us to determine time to jump apex without increasing jump height. - Jason
+   
     
     // declare these (private) variables for use in the script
     private float coyoteTimer;
     private float jumpBufferTimer;
     private Collider2D lastGroundCollider;
     private Vector2 lastGroundPosition;
-   
-
+    private float jumpVelocity; // jump velocity will be set using jumpHeight and timeToApex
+                                // This seperates jump speed and jump height - i.e. we can now jump faster without going higher and vice versa - Jason
+                                
 
     // Functions Start From Here
     // ---------------------------------------------------------------------------------------------------------------------------------- //
@@ -57,7 +57,17 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         inputReader = GetComponent<PlayerInputReader>();
         groundDetector = GetComponent<PlayerGroundDetector>();
         respawnController = GetComponent<PlayerRespawnController>();
-       
+
+        float gravityStrength = (2f * jumpHeight) / (timeToApex * timeToApex);
+
+        rb.gravityScale = gravityStrength / Mathf.Abs(Physics2D.gravity.y);
+        jumpVelocity = gravityStrength * timeToApex;
+        // Calcuation of distance over time using constant acceleration 
+        // Adjusted for unity gravity
+        // This essentially sets jumpVelocity based on the strength of gravity needed to
+        // reduce the velocity of the player to 0 within the time set in var timeToApex
+        // This means, changing the timetoApex will change the speed of the jump, without affecting the height.
+        // Height can now be set seperately - Jason
     }
 
 
@@ -81,7 +91,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         HandleHorizontalMovement(); // calling the movement funciton instead of putting it in here
         HandleJump(); // calling the jump function from below
         ApplyGravityModifiers(); // this little funciton will do jump-cut and extra gravity for falling
-        ApplyApexModifier(); // runs function for Gravity changes at apex of jump - JasonB
+       
         
     } // end fixedupdate
 
@@ -229,31 +239,19 @@ public class JBTest_PlayerMovementController : MonoBehaviour
             rb.linearVelocity = velocity;
 
         }
-        else if (rb.linearVelocity.y > 0f && inputReader.JumpHeld)
+
+        else if (!groundDetector.IsGrounded && Mathf.Abs(rb.linearVelocity.y) < apexThreshold) // Same as above, however with seperate modifier for apexGravityMultiplier -this stops them fighting over control of rb.linear velocity - Jason
         {
             Vector2 velocity = rb.linearVelocity;
-            float extraGravity = Physics2D.gravity.y * (ascendingGravityMultiplier - 1f) * Time.fixedDeltaTime; 
-            velocity.y += extraGravity;
+            float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime;
+            velocity.y -= apexCounterGravity;
             rb.linearVelocity = velocity;
         }
-
+        
 
     } // end ApplyGravityModifiers
 
-    private void ApplyApexModifier() // Adds an upward nudge at the apex of jumping, helps gravity feel "real". - Jason
-    {
-        if (!groundDetector.IsGrounded && Mathf.Abs(rb.linearVelocity.y) < apexThreshold)
-        {
-
-
-            Vector2 velocity = rb.linearVelocity; // Get players current velocity and assigns to local variable - Jason
-
-            float apexCounterGravity = Physics2D.gravity.y * (1f - apexGravityMultiplier) * Time.fixedDeltaTime; // Cancels out the gravity multiplier, reducing the pull of gravity at the apex of the jump  -Jason
-            velocity.y -= apexCounterGravity; // Applies to the players y velocity variable - Jason
-            rb.linearVelocity = velocity; // Applies to the rigidbody velocity to actually apply the movement - Jason
-        }
-    }
-
+   
 
     private void SpriteFlipX(float moveInput) // Flips sprite based on either side of 0 based on moveInput - Jason
     {
