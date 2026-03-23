@@ -30,18 +30,19 @@ public class JBTest_PlayerMovementController : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.1f; // how long a 'jump' command can be remembered before landing/being fired
     [SerializeField] private float jumpCutGravityMultiplier = 2f; // how much extra gravity to apply when jump is released
     [SerializeField] private float fallGravityMultiplier = 2.5f; // how much extra gravity to apply when the player is falling
-    [SerializeField] private float apexThreshold = 2f; // apexGravity multiplier only takes effect after the player reaches this velocity - JasonB
-                                                      // Essentially, the greater this number - the floatier the hang time is. Mess around with it! - JasonB
-    [SerializeField] private float apexGravityMultiplier = 0.4f;  // This basically reserves momentum upwards when the jump button is released near the apex of each jump - JasonB
-                                                                 //This greatly aids "game feel" and makes the player feel more real within the physics space - Jason B
+    [SerializeField] private float apexThreshold = 2f; // apexGravity multiplier only takes effect after the player reaches this velocity - Jason
+                                                      // Essentially, the greater this number - the floatier the hang time is. Mess around with it! - Jason
+    [SerializeField] private float apexGravityMultiplier = 0.4f;  // This basically reserves momentum upwards when the jump button is released near the apex of each jump - Jason
+                                                                 //This greatly aids "game feel" and makes the player feel more real within the physics space - Jason 
     [SerializeField] private float maxFallSpeed = -20f; // Clamp fall speed - useful for longer drops - JasonB
 
+    
     // declare these (private) variables for use in the script
     private float coyoteTimer;
     private float jumpBufferTimer;
     private Collider2D lastGroundCollider;
     private Vector2 lastGroundPosition;
-
+   
 
 
     // Functions Start From Here
@@ -79,7 +80,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         HandleJump(); // calling the jump function from below
         ApplyGravityModifiers(); // this little funciton will do jump-cut and extra gravity for falling
         ApplyApexModifier(); // runs function for Gravity changes at apex of jump - JasonB
-     
+        
     } // end fixedupdate
 
 
@@ -242,7 +243,7 @@ public class JBTest_PlayerMovementController : MonoBehaviour
         }
     }
 
-
+    
 } // end class
 
 
