@@ -10,6 +10,7 @@ public class GameUIController : MonoBehaviour
 
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject player; // WJ 19/03 - player game object
     [SerializeField] private Button playAgainButton;
     [SerializeField] private PlayerLifeController lifeController; // refence to the lifecontroller, o the script that will call the gameover and respawn envents
 
@@ -52,6 +53,7 @@ public class GameUIController : MonoBehaviour
 
     private void HandleGameOver()
     {
+        player.SetActive(false); // WJ 19/03 - set player game object inactive
         gameOverPanel.SetActive(true); // show game over panel
         Time.timeScale = 0f; // pause gameplay
 
