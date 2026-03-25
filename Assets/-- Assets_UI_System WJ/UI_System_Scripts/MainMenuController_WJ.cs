@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private string level1;
-
+    
     public void StartGame()
     {
-        SceneManager.LoadScene(level1);
+        SceneManager.LoadSceneAsync(level1);
     }
 
     public void QuitGame()
