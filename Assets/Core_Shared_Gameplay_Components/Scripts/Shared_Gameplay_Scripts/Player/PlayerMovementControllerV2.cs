@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInputReader))]
 [RequireComponent(typeof(PlayerGroundDetector))]
 
-public class JBTest_V2_PlayerMovementController : MonoBehaviour
+public class PlayerMovementControllerV2 : MonoBehaviour
 {
 
     // these privave fields are going to be storing some of the stuff from the player they are attached to; its rigidbody in rb, details from its inputreader and grounddetector scripts. - Tork
