@@ -10,9 +10,12 @@ public class GameUIController : MonoBehaviour
 
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject player; // WJ 19/03 - player game object
+    [SerializeField] private GameObject pauseMenu; // WJ 26/03 - pause menu game object
+    [SerializeField] private GameObject player; // WJ 19/03 - player game object    
     [SerializeField] private Button playAgainButton;
     [SerializeField] private PlayerLifeController lifeController; // refence to the lifecontroller, o the script that will call the gameover and respawn envents
+    [SerializeField] private string mainMenu = "MainMenu";
+    private bool gamePaused = false; // WJ
 
 
 
@@ -20,6 +23,7 @@ public class GameUIController : MonoBehaviour
     {
 
         gameOverPanel.SetActive(false); // hid panel on awake
+        Time.timeScale = 1f; // WJ 26/03
 
 
     } // end awake
@@ -43,6 +47,18 @@ public class GameUIController : MonoBehaviour
 
 
     } // end start
+
+    private void Update()
+    {
+        
+        if(Input.GetKeyDown(KeyCode.Escape))// - WJ
+        {
+            
+            PauseGame();
+        }
+        
+
+    }// end update
 
     public void RestartGame() // little function to call the scenemanager and reload. it is PUBLIC because we're going to want the button to be able to access it for OnCLick
     {
@@ -73,6 +89,27 @@ public class GameUIController : MonoBehaviour
         UpdateLivesUI(); // then run the update lives method from above
     }
 
+    public void ReturnToMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync(mainMenu);
+    }
 
+    public void PauseGame() // Function to pause game - Winter James
+    {
+        gamePaused = !gamePaused;
+
+        if (gamePaused == true && gameOverPanel.activeSelf == false)
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;            
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+        }
+
+    }// end PauseGame
 
 } // end class
