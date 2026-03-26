@@ -91,7 +91,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
         HandleHorizontalMovement(); // calling the movement funciton instead of putting it in here
         HandleJump(); // calling the jump function from below
         ApplyGravityModifiers(); // this little funciton will do jump-cut and extra gravity for falling
-              
+       
         
     } // end fixedupdate
 
