@@ -10,12 +10,15 @@ public class GameUIController : MonoBehaviour
 
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject pauseMenu; // WJ 26/03 - pause menu game object
-    [SerializeField] private GameObject player; // WJ 19/03 - player game object    
+    [SerializeField] private GameObject pauseMenu; // WJ - pause menu game object
+    [SerializeField] private GameObject player; // WJ - player game object    
     [SerializeField] private Button playAgainButton;
     [SerializeField] private PlayerLifeController lifeController; // refence to the lifecontroller, o the script that will call the gameover and respawn envents
-    [SerializeField] private string mainMenu = "MainMenu";
-    private bool gamePaused = false; // WJ
+    [SerializeField] private string mainMenu = "MainMenu"; // WJ - string for navigation to main menu
+    private bool gamePaused = false; // WJ - bool to check if game is paused
+    private string[] coffeeCode; // WJ - string to store cheat code
+    private int coffeeCodeIndex; // WJ - int to store cheat code length
+    private bool coffeeCodeActive = false; // WJ - bool to check if cheat code active
 
 
 
@@ -23,7 +26,7 @@ public class GameUIController : MonoBehaviour
     {
 
         gameOverPanel.SetActive(false); // hid panel on awake
-        Time.timeScale = 1f; // WJ 26/03
+        Time.timeScale = 1f; // WJ 26/03 - ensure game timescale is normal at load
 
 
     } // end awake
@@ -45,20 +48,31 @@ public class GameUIController : MonoBehaviour
 
         UpdateLivesUI(); // we also need to call the lives update funciton on start so that we show the right number of lives from the get-go
 
+        coffeeCode = new string[] { "c", "o", "f", "f", "e", "e" };// WJ - assign new string containing cheat code sequence
+        coffeeCodeIndex = 0;// WJ - initialise cheat code index
 
     } // end start
 
     private void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.Escape))// - WJ
-        {
-            
+        if (Input.GetKeyDown(KeyCode.Escape))// WJ - call pause function on ESC press
+        {            
             PauseGame();
-        }
-        
+        }// WJ - end if
+
+        if (pauseMenu.activeSelf == true)// WJ - enable cheat entry while pause menu is active
+        {
+            CheatEntry();
+        }// WJ - end if
+
+        if (pauseMenu.activeSelf == false && coffeeCodeActive == true) // WJ - double game speed if game is unpaused and cheat code has been entered
+        {                                                              
+            Time.timeScale = 2f;                                       
+        }// WJ - end if
 
     }// end update
+
 
     public void RestartGame() // little function to call the scenemanager and reload. it is PUBLIC because we're going to want the button to be able to access it for OnCLick
     {
@@ -89,27 +103,66 @@ public class GameUIController : MonoBehaviour
         UpdateLivesUI(); // then run the update lives method from above
     }
 
-    public void ReturnToMenu()
+    public void ReturnToMenu() // function for returning to main menu
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadSceneAsync(mainMenu);
-    }
+        Time.timeScale = 1f; // WJ - reset game speed
+        SceneManager.LoadSceneAsync(mainMenu); // WJ -load main menu, async to prevent load stuttering
+    } // WJ - end returntomenu
 
-    public void PauseGame() // Function to pause game - Winter James
+    public void PauseGame()// WJ - Function to pause game
     {
-        gamePaused = !gamePaused;
+        gamePaused = !gamePaused; // WJ - flips gamepaused bool state
 
-        if (gamePaused == true && gameOverPanel.activeSelf == false)
+        if (gamePaused == true && gameOverPanel.activeSelf == false) // WJ - checks that the game should be paused and the game over screen is inactive
         {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0f;            
+            pauseMenu.SetActive(true); // WJ - display pause menu
+            Time.timeScale = 0f; // WJ - pause game           
         }
         else
         {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1f;
+            pauseMenu.SetActive(false); // WJ - deactivate pause menu
+            Time.timeScale = 1f; // WJ - resume game
         }
 
-    }// end PauseGame
+    }//WJ - end PauseGame
+
+    private void CheatEntry()// WJ - Function to check for cheat code entry
+    {
+        if (Input.anyKeyDown) // WJ - check key input
+        {
+
+            if (Input.GetKeyDown(coffeeCode[coffeeCodeIndex])) // WJ - increment index if input matches string
+            {
+                coffeeCodeIndex++;
+            }
+
+            else // WJ - reset index if input does not match string
+            {
+                coffeeCodeIndex = 0;
+            }
+
+        }// WJ - end if
+
+        if (coffeeCodeIndex == coffeeCode.Length) // WJ - check if index = length of cheat code string
+        {
+            
+            if (coffeeCodeActive == false) // WJ - activate cheat code if inactive and reset index
+            {
+                coffeeCodeActive = true;
+                Debug.Log("zip zoom");
+                coffeeCodeIndex = 0;
+
+            }// WJ - end if active = false
+
+            else // WJ - set cheat code inactive if active and reset index
+            {
+                Debug.Log("crash :(");
+                coffeeCodeActive = false;
+                coffeeCodeIndex = 0;
+            }// WJ - end else
+
+        } //WJ - end if index = length
+
+    }// WJ - end CheatEntry
 
 } // end class
