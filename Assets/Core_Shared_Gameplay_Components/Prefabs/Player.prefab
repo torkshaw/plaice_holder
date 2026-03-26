@@ -634,11 +634,11 @@ MonoBehaviour:
   acceleration: 60
   deceleration: 80
   airControlMultiplier: 0.6
-  jumpHeight: 3.5
+  jumpHeight: 3
   timeToApex: 0.35
   coyoteTime: 0.15
   jumpBufferTime: 0.1
-  jumpCutGravityMultiplier: 10
+  jumpCutGravityMultiplier: 2
   fallGravityMultiplier: 2.5
   apexThreshold: 2
   apexGravityMultiplier: 0.4
