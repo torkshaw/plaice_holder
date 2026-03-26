@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro; // and we're using TMP for all teh text, so this needs to be in here too
-using UnityEngine.UI; // cos we're using buttons on this - and this is the unity namespace for this
 using UnityEngine.SceneManagement; // this also needs to reload the scene so we need this in here too
 
 public class GameUIController : MonoBehaviour
@@ -12,7 +11,6 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject pauseMenu; // WJ - pause menu game object
     [SerializeField] private GameObject player; // WJ - player game object    
-    [SerializeField] private Button playAgainButton;
     [SerializeField] private PlayerLifeController lifeController; // refence to the lifecontroller, o the script that will call the gameover and respawn envents
     [SerializeField] private string mainMenu = "MainMenu"; // WJ - string for navigation to main menu
     private bool gamePaused = false; // WJ - bool to check if game is paused
@@ -25,7 +23,7 @@ public class GameUIController : MonoBehaviour
     private void Awake()
     {
 
-        gameOverPanel.SetActive(false); // hid panel on awake
+        gameOverPanel.SetActive(false); // hide panel on awake
         Time.timeScale = 1f; // WJ 26/03 - ensure game timescale is normal at load
 
 
@@ -36,6 +34,15 @@ public class GameUIController : MonoBehaviour
 
 
         // subscribing to events from the LifeController
+
+        
+
+        lifeController.DamageTaken += HandleDamageTaken;  // samething here but we're listening for DamageTaken notifier and running HandleDamageTaken
+
+        lifeController.RespawnRequested += UpdateLivesUI; // same thing here but with that respawn funciton. this happens in lifeController after the player dies, and lives are reduced.
+
+        UpdateLivesUI(); // we also need to call the lives update funciton on start so that we show the right number of lives from the get-go
+
         lifeController.GameOverRequested += HandleGameOver; // look at the PlayerLifeController script (we assigned this above)
                                                             // when the "gameoverrequested" event fires (is Invoked) also run HandleGameOver
                                                             // the += here means "add this to the thing on the left".
@@ -43,10 +50,7 @@ public class GameUIController : MonoBehaviour
                                                             // so here we're essentially making this script a listener for the GameOverRequested, and describing what to do when we hear it
                                                             // this goes in 'start' because we want to create this connection/listening from when all the objects have been created
 
-        lifeController.RespawnRequested += UpdateLivesUI; // same thing here but with that respawn funciton. this happens in lifeController after the player dies, and lives are reduced.
-        lifeController.DamageTaken += HandleDamageTaken;  // samething here but we're listening for DamageTaken notifier and running HandleDamageTaken
-
-        UpdateLivesUI(); // we also need to call the lives update funciton on start so that we show the right number of lives from the get-go
+        
 
         coffeeCode = new string[] { "c", "o", "f", "f", "e", "e" };// WJ - assign new string containing cheat code sequence
         coffeeCodeIndex = 0;// WJ - initialise cheat code index
@@ -156,7 +160,7 @@ public class GameUIController : MonoBehaviour
 
             else // WJ - set cheat code inactive if active and reset index
             {
-                Debug.Log("crash :(");
+                Debug.Log("caffeine crash :(");
                 coffeeCodeActive = false;
                 coffeeCodeIndex = 0;
             }// WJ - end else
