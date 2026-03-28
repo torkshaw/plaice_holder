@@ -16,11 +16,15 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        winter_OST = true;
         DontDestroyOnLoad(gameObject);
         musicPlayer = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
         musicPlayer.volume = 0;
+    }
+
+    public void SoundtrackToggle()
+    {
+        winter_OST = !winter_OST;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
