@@ -282,6 +282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1310443746926738313}
+  - component: {fileID: 8052840662552125593}
   - component: {fileID: 4890738608822975886}
   - component: {fileID: 6044905091822311329}
   - component: {fileID: 7057092321802432080}
@@ -324,6 +325,32 @@ Transform:
   - {fileID: 8726047259442518340}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8052840662552125593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909719117465325344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae67a051c94b884f917f6b5413342f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  maxMoveSpeed: 8
+  acceleration: 60
+  deceleration: 80
+  airControlMultiplier: 0.6
+  jumpHeight: 3.2
+  timeToApex: 0.35
+  coyoteTime: 0.15
+  jumpBufferTime: 0.1
+  jumpCutGravityMultiplier: 2
+  fallGravityMultiplier: 2.5
+  apexThreshold: 2
+  apexGravityMultiplier: 0.4
+  maxFallSpeed: -20
 --- !u!50 &4890738608822975886
 Rigidbody2D:
   serializedVersion: 5
@@ -634,11 +661,11 @@ MonoBehaviour:
   acceleration: 60
   deceleration: 80
   airControlMultiplier: 0.6
-  jumpHeight: 3.5
+  jumpHeight: 3
   timeToApex: 0.35
   coyoteTime: 0.15
   jumpBufferTime: 0.1
-  jumpCutGravityMultiplier: 10
+  jumpCutGravityMultiplier: 2
   fallGravityMultiplier: 2.5
   apexThreshold: 2
   apexGravityMultiplier: 0.4
