@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using TMPro;
+
 public class MusicManager : MonoBehaviour
 
 {
-    public bool winter_OST = true;
+    public bool ella_OST;
     public AudioSource musicPlayer;
-
+    [SerializeField] private TMP_Text livesText;
     [Header("Winter's Music")]
     public AudioClip[] musicWinter;
 
@@ -20,22 +22,34 @@ public class MusicManager : MonoBehaviour
         musicPlayer = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
         musicPlayer.volume = 0;
+
     }
 
     public void SoundtrackToggle()
     {
-        winter_OST = !winter_OST;
+        ella_OST = !ella_OST;
+        if (ella_OST == false)
+        {
+            Debug.Log("winter ost play");
+            PlaySceneMusicWinter();            
+        }
+        else
+        {
+            Debug.Log("Ella ost play");
+            //    PlaySceneMusicElla();
+        }
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (winter_OST == true)
+        if (ella_OST == false)
         {
             PlaySceneMusicWinter();
         }
         else
         {
-        //    PlaySceneMusicElla();
+            Debug.Log("Ella ost play");
+            //    PlaySceneMusicElla();
         }
         
 
