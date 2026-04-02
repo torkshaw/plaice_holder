@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// this script is an adaptation of the one i wrote for the scrolling shooter project
+// TS
+
 public class EnemyPatrol2D : MonoBehaviour
 {
 

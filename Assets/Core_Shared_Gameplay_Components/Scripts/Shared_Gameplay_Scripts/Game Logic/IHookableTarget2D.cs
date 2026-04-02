@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// TS
 
 // this is an INTERFACE script (see its definition where it would normally say "public void.." or similar), not a regular class. it acts as a DEFINITION.
 // this does not go on any objects or anything in the scene, instead it lives in the project and is implemented through other scripts
