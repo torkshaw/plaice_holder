@@ -1,5 +1,8 @@
 using UnityEngine;
 
+
+// TS
+
 public class HookableEnemy2D : MonoBehaviour, IHookableTarget2D // must remeber to implement the INTERFACE script (IHookableTarget2D)
 {
 

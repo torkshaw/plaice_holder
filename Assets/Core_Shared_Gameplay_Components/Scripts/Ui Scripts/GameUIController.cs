@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro; // and we're using TMP for all teh text, so this needs to be in here too
 using UnityEngine.SceneManagement; // this also needs to reload the scene so we need this in here too
 
+
+// TS
 public class GameUIController : MonoBehaviour
 {
 

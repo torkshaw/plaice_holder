@@ -555,6 +555,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &661080142 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1283296659734025421, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+  m_PrefabInstance: {fileID: 1482858431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!120 &742332209 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 7646628691423474678, guid: 50fca7751f6e00a4d9c7849c4905d1f1, type: 3}
@@ -1679,8 +1684,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesText: {fileID: 944016517}
   gameOverPanel: {fileID: 1442948680}
-  playAgainButton: {fileID: 1932763928}
+  pauseMenu: {fileID: 0}
+  player: {fileID: 0}
   lifeController: {fileID: 779446291}
+  mainMenu: MainMenu
 --- !u!114 &1273781137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,6 +1913,10 @@ PrefabInstance:
       propertyPath: hookableMask.m_Bits
       value: 3456
       objectReference: {fileID: 0}
+    - target: {fileID: 8052840662552125593, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 661080142}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

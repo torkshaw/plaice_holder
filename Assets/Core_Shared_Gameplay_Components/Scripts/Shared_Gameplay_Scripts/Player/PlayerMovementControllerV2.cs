@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// TS
+
 // here we're making sure certain characteristics are true of the game object this script lives on. in this case the player, who will have all 3 of these elements listed assigned to them. - Tork
 [RequireComponent(typeof(Rigidbody2D))] 
 [RequireComponent(typeof(PlayerInputReader))]

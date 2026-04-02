@@ -1,6 +1,9 @@
 using System.Xml.Serialization;
 using UnityEngine;
 
+
+// TS
+
 public class HookablePlatform2D : MonoBehaviour, IHookableTarget2D // here we need to IMPLEMENT this INTERFACE script. that little thing that goes on all hookable stuff and defines what it needs to provide.
 {
     // enum for platform type

@@ -1,5 +1,11 @@
 using UnityEngine;
 
+// TS
+// Much of this script came from an upgraded version of a tutorial script. This script came from 
+// my previous project (scrolling shooter). 
+// it is WAY more comprehensive than we need for this project but gave us options to play with when
+// we were prototypeing. 
+
 public class DynamicCamera2D : MonoBehaviour
 {
     public enum CameraMode
