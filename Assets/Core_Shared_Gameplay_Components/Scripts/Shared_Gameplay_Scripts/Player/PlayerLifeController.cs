@@ -1,6 +1,9 @@
 using UnityEngine;
 using System;
 
+// this script is based on the script I used in my scrolling shooter/the tutorial we did in class
+// TS
+
 public class PlayerLifeController : MonoBehaviour
 {
     // configurable inspector variables 
