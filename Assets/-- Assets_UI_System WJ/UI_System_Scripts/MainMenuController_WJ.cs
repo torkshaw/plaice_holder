@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private string level1;
-    
+
+
     public void StartGame()
     {
         SceneManager.LoadSceneAsync(level1);
@@ -14,6 +15,8 @@ public class MainMenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+
 
 }// end of class
 // winter james
