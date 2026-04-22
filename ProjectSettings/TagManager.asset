@@ -61,11 +61,11 @@ TagManager:
   - name: Foreground-CLOSE
     uniqueID: 140197511
     locked: 0
+  - name: Fishing Minigame
+    uniqueID: 690761535
+    locked: 0
   - name: UI
     uniqueID: 4020590373
-    locked: 0
-  - name: 
-    uniqueID: 690761535
     locked: 0
   - name: 
     uniqueID: 1452389085
