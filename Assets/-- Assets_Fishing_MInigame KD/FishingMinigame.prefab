@@ -145,7 +145,7 @@ MonoBehaviour:
   timerMultiplicator: 3
   smoothMotion: 1
   hook: {fileID: 6086411928376907162}
-  hookSize: 0.1
+  hookSize: 1
   hookPower: 0.4
   hookPullPower: 0.01
   hookGravityPower: 0.005
