@@ -81,6 +81,12 @@ public class FishingRodController2D : MonoBehaviour
 
     private void Update()
     {
+        if (FishingLevelManager.Instance != null && FishingLevelManager.Instance.IsMinigameActive) // if the level manager says minigame is active PAUSE all other rod behaviours
+        {
+            isReeling = false;
+            return;
+        }
+
         HandleInput();
         HandleReeling();
         CheckForLineBreak();

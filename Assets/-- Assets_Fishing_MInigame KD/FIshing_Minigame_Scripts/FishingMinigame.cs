@@ -120,10 +120,19 @@ public class FishingMinigame : MonoBehaviour
     {
         pause = true;
         Debug.Log("YOU WIN");
+        if (FishingLevelManager.Instance != null)
+        {
+            FishingLevelManager.Instance.NotifyMinigameWon();
+        }
     }
     void Lose()
     {
         pause = true;
         Debug.Log("YOU LOSE");
+
+        if (FishingLevelManager.Instance != null)
+        {
+            FishingLevelManager.Instance.NotifyMinigameLost();
+        }
     }
 }
