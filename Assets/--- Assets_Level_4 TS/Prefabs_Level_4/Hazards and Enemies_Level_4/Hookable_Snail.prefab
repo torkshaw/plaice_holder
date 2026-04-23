@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3212801859442847008, guid: 27e19585847bdd84490e38165ade6e54, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a56f4cdc2c510fd43805dfc1e3fc2f06, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7311692590258317095}
   - component: {fileID: 5123054634432679266}
   m_Layer: 10
-  m_Name: Enemy_Hookable_Level_4
+  m_Name: Hookable_Snail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachPoint: {fileID: 405823422475177931}
   pullSpeed: 3
+  pullMode: 0
   enemyPatrol: {fileID: 5123054634432679266}
+  verticalLiftUnlockDistance: 0.5
 --- !u!50 &2513868803312027757
 Rigidbody2D:
   serializedVersion: 5
