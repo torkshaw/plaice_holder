@@ -8,17 +8,18 @@ public class MusicManager : MonoBehaviour
 {
     public bool ella_OST;
     public AudioSource musicPlayer;
-    [SerializeField] private TMP_Text livesText;
     [Header("Winter's Music")]
     public AudioClip[] musicWinter;
+
 
 
     //[Header("Ella's Music")]
     //public AudioClip[] musicElla;
 
+
+
     private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
+    {        
         musicPlayer = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
         musicPlayer.volume = 0;
