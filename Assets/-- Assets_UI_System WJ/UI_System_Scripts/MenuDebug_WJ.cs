@@ -19,7 +19,7 @@ public class MenuDebug : MonoBehaviour
 
     } // end ResetMenu
 
-    public void LevelSelect()
+    public void LevelSelect() //checks for F1-F5 key press and loads the relevant level
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
@@ -46,7 +46,7 @@ public class MenuDebug : MonoBehaviour
             SceneManager.LoadSceneAsync(levelSelect5);
         }
 
-    }
+    } // end levelselect
 
 }// end of class
 // winter james

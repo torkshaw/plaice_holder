@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6955ac771e423bc4c888bdf98c89ee69
+guid: 6525c5962a9c74c4eabb2fce2e518f53
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5823535938156811452
-    second: backgroyund_0
+      213: 8741705539153074105
+    second: Soft_Circle_A_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backgroyund_0
+      name: Soft_Circle_A_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb4de82d41b51d050800000000000000
-      internalID: 5823535938156811452
+      spriteID: 9b798405fd6c05970800000000000000
+      internalID: 8741705539153074105
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      backgroyund_0: 5823535938156811452
+      Soft_Circle_A_0: 8741705539153074105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
