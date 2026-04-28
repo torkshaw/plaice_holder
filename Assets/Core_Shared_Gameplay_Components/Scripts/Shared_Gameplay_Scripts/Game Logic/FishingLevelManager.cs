@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 // this is what we use to fire the minigame but also to track wins/losses (TS)
@@ -10,16 +11,23 @@ public class FishingLevelManager : MonoBehaviour
     [SerializeField] private FishingMinigame fishingMinigamePrefab; // this is the prefab of the minigame. we do a new one for each time we fish.
     [SerializeField] private Vector3 minigameSpawnOffset = new Vector3(2f, 1.5f, 0f); // where FROM the spawn location we want to fire up the game
 
-    [Header("Spawn Location Object")]
+    [Header("Spawn Minigame Next to")]
     [SerializeField] private Transform playerTransform; // what object do we want o spawwn next to (respecting the offset above)
 
     [Header("Game Stats (for this scene/level)")]
     [SerializeField] private int fishCaughtThisLevel;
     [SerializeField] private bool isMinigameActive;
+    [SerializeField] private TMP_Text fishCounter; // UI field for this variable
+
+    [Header("Level Completion Management")]
+    [SerializeField] private int fishNeededToCompleteLevel;
+    [SerializeField] private LevelExitSequence exitSequenceObject; // this refers to an exit objet that has the ExitSequence script as a component on it
+
 
     private HookableFish2D currentFish;
     private FishingRodController2D currentRod;
     private FishingMinigame activeMinigameInstance; // the instance of the prefab we've fired up for this
+    private bool levelCompletionTriggered = false; // has level completion been trigered yet?
 
     public bool IsMinigameActive => isMinigameActive; // this is public so the rod script can stop doing controls
     public int FishCaughtThisLevel => fishCaughtThisLevel; // this is public so we can use it to drive level mechanics
@@ -33,7 +41,11 @@ public class FishingLevelManager : MonoBehaviour
             return;
         }
 
-        Instance = this;
+        Instance = this; // make this version the globally accessible version of this script
+
+        UpdateFishCounter(); // update the fish counter UI
+
+
     } // end Awake
 
     public void StartFishingEncounter(HookableFish2D fish, FishingRodController2D rod) // this is what fires up the minigame
@@ -106,6 +118,8 @@ public class FishingLevelManager : MonoBehaviour
         if (playerWon) // when it fires a win
         {
             fishCaughtThisLevel++; // increase the fish caught for the level
+            UpdateFishCounter();
+            TryCompleteLevel(); // check to see if this is enough to trigger level completion
 
             if (currentFish != null)
             {
@@ -131,9 +145,47 @@ public class FishingLevelManager : MonoBehaviour
         }
 
         // reset all our minigame variables to nil
-        currentFish = null; 
+        currentFish = null;
         currentRod = null;
         isMinigameActive = false;
     } // end CompleteCurrentFishingEncounter
+
+
+    private void TryCompleteLevel() // this method checks to see if we should do level completion
+    {
+        if (levelCompletionTriggered) // if its already been completed drop out
+        {
+            return;
+        }
+
+        if (fishCaughtThisLevel >= fishNeededToCompleteLevel) // if the fish cuaght meets fish needed...
+        {
+            Debug.Log($"LEVEL COMPLETE. Total fish caught this level: {fishCaughtThisLevel}");
+            levelCompletionTriggered = true; // flag the level to completion triggered
+            TriggerLevelCompletion(); // run the method below to kick off the sequence
+        }
+    }
+
+    private void TriggerLevelCompletion() // this method actually calls the PlaySequence method from the script living on the referred exitSequenceObject
+    {
+        if (exitSequenceObject == null) // check to see that we have an object assigned and warn if not
+        {
+            Debug.LogWarning("LEVEL COMPLETE, BUT - FishingLevelManager: No LevelExitSequence Object assigned");
+            return;
+        }
+        exitSequenceObject.PlaySequence(fishCaughtThisLevel, fishNeededToCompleteLevel);
+    }
+
+    private void UpdateFishCounter()
+    {
+        if (fishCounter == null) // check to see that we have an object assigned and warn if not
+        {
+            Debug.LogWarning("No Fish Counter UI Assigned");
+            return;
+        }
+        fishCounter.text = $"{fishCaughtThisLevel} of {fishNeededToCompleteLevel}";
+
+    }
+
 
 } // end class
