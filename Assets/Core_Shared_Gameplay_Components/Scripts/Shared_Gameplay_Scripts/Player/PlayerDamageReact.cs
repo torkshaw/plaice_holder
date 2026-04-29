@@ -89,7 +89,7 @@ public class PlayerDamageReact : MonoBehaviour
     private void HandleDamageTaken(Collider2D sourceCollider, Vector2 hitDirection)
     {
 
-        Debug.Log("PlayerDamageReact received damage event");
+        // Debug.Log("PlayerDamageReact received damage event");
 
         // this is the knockback if
         if (rb != null) // make sure we have an rb captured
