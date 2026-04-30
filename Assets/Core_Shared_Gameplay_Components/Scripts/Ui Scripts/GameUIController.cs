@@ -91,7 +91,7 @@ public class GameUIController : MonoBehaviour
     {
         player.SetActive(false); // WJ 19/03 - set player game object inactive
         gameOverPanel.SetActive(true); // show game over panel
-        Time.timeScale = 0f; // pause gameplay
+        Time.timeScale = 1f; // pause gameplay
 
     } // end handlegameover
 
