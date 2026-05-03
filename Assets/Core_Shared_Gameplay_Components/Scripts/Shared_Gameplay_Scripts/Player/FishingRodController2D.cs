@@ -49,6 +49,15 @@ public class FishingRodController2D : MonoBehaviour
         public Transform RodPoint => rodPoint; // expose a ref to the actual rodpoint so the one we drag in can be seen by all scripts, not just this one
 
 
+    // EVENTS TO BROADCAST -----------------------------
+    public static event System.Action AttachToObject;
+    public static event System.Action ReelingStarted;
+    public static event System.Action ReelingStopped; 
+    public static event System.Action DetatchObject;
+
+
+ 
+
 
     // Functions Start From Here
     // ---------------------------------------------------------------------------------------------------------------------------------- //
@@ -83,8 +92,8 @@ public class FishingRodController2D : MonoBehaviour
     {
         if (FishingLevelManager.Instance != null && FishingLevelManager.Instance.IsMinigameActive) // if the level manager says minigame is active PAUSE all other rod behaviours
         {
-            isReeling = false;
-            return;
+SetReeling(false);
+return;
         }
 
         HandleInput();
@@ -116,13 +125,12 @@ public class FishingRodController2D : MonoBehaviour
 
         if (inputReader != null)
         {
-            isReeling = inputReader.ReelHeld && groundDetector != null && groundDetector.IsGrounded; 
-            // asking each frame if the inputreader has a true value for ReelHeld (RMB is pressed) AND if the player is on the ground. if SO set isReeling to true. 
+            SetReeling(inputReader.ReelHeld && groundDetector != null && groundDetector.IsGrounded);  // asking each frame if the inputreader has a true value for ReelHeld (RMB is pressed) AND if the player is on the ground. if SO set isReeling to true. 
             // we dont want the player reeling when they are in the air. it makes for weird platform moving behaviours. 
         }
         else
         {
-            isReeling = false; // if not, to false
+            SetReeling(false); // if not, to false
         }
 
         if (inputReader != null && inputReader.CastPressed) // asking each frame if CastPressed is TRUE
@@ -192,8 +200,11 @@ public class FishingRodController2D : MonoBehaviour
         }                                    // that allows the target object to do its own uncoupling from the rod - most likely just nulling the reference to it.   
         currentAttachPoint = null;
         currentTargetComponent = null;
-        isReeling = false;
+        SetReeling(false);
         currentLineLength = 0f;
+
+        DetatchObject?.Invoke(); // call the event for stuff that's listening so it knows we've detached
+
         if (lineRenderer != null)
         {
             lineRenderer.enabled = false;
@@ -325,7 +336,7 @@ public class FishingRodController2D : MonoBehaviour
                                // this format is common in c# - object.Function(argument). Which means Ask object to run Function giving it argument.
                                // so this is "ask the platform (or whater we hooked) to run OnHooked, giving it the details of this rod as the argument".
 
-
+        AttachToObject?.Invoke(); // announce that we connected to something
 
     } // end AttachToTarget
 
@@ -420,25 +431,42 @@ public class FishingRodController2D : MonoBehaviour
             return false;
 
         return groundDetector.GroundRigidBody == hookedRb; // if the grounddetector RB is the same as rigid body return TRUE
-    }
+    } // end IsStandingOnHookedPlatform
 
-
-
-
-
-
-
-
-
-    private void OnGUI() // so we can see what all the variables are, live. remove this later.
-
+    private void SetReeling(bool shouldBeReeling) // this littl helper came straight from chatGTP. i needed a way to BROADCAST the start and stop reeling stats for SFX.
     {
-        GUILayout.Label($"Hooked: {IsHooked}");
-        GUILayout.Label($"Reeling: {IsReeling}");
-        GUILayout.Label($"Current Line Length: {currentLineLength:F2}");
-        GUILayout.Label($"Actual Distance: {GetCurrentTargetDistance():F2}");
-        GUILayout.Label($"Under Tension: {IsLineUnderTension()}");
-    }
+        if (isReeling == shouldBeReeling)
+        {
+            return;
+        }
+
+        isReeling = shouldBeReeling;
+
+        if (isReeling)
+        {
+            ReelingStarted?.Invoke();
+        }
+        else
+        {
+            ReelingStopped?.Invoke();
+        }
+    } // end SetReeling
+
+
+
+
+
+
+
+    //private void OnGUI() // so we can see what all the variables are, live. remove this later.
+
+    //{
+    //    GUILayout.Label($"Hooked: {IsHooked}");
+    //    GUILayout.Label($"Reeling: {IsReeling}");
+    //    GUILayout.Label($"Current Line Length: {currentLineLength:F2}");
+    //    GUILayout.Label($"Actual Distance: {GetCurrentTargetDistance():F2}");
+    //    GUILayout.Label($"Under Tension: {IsLineUnderTension()}");
+    //}
 
 
 } // end class

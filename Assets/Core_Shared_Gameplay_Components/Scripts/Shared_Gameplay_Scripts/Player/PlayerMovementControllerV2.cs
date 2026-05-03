@@ -47,7 +47,13 @@ public class PlayerMovementControllerV2 : MonoBehaviour
     private Vector2 lastGroundPosition;
     private float jumpVelocity; // jump velocity will be set using jumpHeight and timeToApex
                                 // This seperates jump speed and jump height - i.e. we can now jump faster without going higher and vice versa - Jason
-                                
+
+
+
+    // BROADCAST EVENTS ---------------------------- Events that fire so other scripts can listen to them and respond (maybe with SFX/FX etc.)
+
+    public static event System.Action OnJump;
+
 
     // Functions Start From Here
     // ---------------------------------------------------------------------------------------------------------------------------------- //
@@ -205,6 +211,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
 
             jumpBufferTimer = 0f; // then we reset the buffer timer so jump can only happen once per input
             coyoteTimer = 0f; // and we reset coyote timer so jump can only happen once per input
+            OnJump?.Invoke(); // call the event for stuff that's listening
 
         }
 

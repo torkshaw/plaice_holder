@@ -36,6 +36,9 @@ public class PlayerLifeController : MonoBehaviour
     public bool IsDead => isDead; // exposing this so that other scripts can use it
     public bool IsInvulnerable => isInvulnerable; // exposing this so that other scripts can use it
 
+
+    // Broadcast events: these events allow for stuff like the audiomanager and FX manager to listen for these and respond accordingly
+
     public event Action RespawnRequested; // this action is a public "event"" taht other scripts can subscribe to. so our respawn script can respond when this action is called. 
                                           // actions can be listened to by other scripts but they can't be <called> but those scripts. they're just listing for this.
                                           // this is just a call. it deosn't contain any data. So when we broadcast this other scripts can respond to this simple request.
@@ -52,6 +55,8 @@ public class PlayerLifeController : MonoBehaviour
     public event Action<Collider2D, Vector2> DamageTaken;       // this action event will broadcast when the player takes a hit from a NON RESPAWN (ApplyHit(false)) enemy.
                                                                 // this event can be listened to by the damage reaction script on the player to do flashing, knockback, etc.
                                                                 // this event also captures the collider reference and vector 2 (position) of the thing that did damage.
+
+    public static event System.Action OnLifeLost; // player loses a life - this happens whenever the player has their life counter reduced (hitting an enemy OR falling in water)
 
 
     public void ApplyHit(bool shouldRespawn, Collider2D sourceCollider) 
@@ -73,6 +78,8 @@ public class PlayerLifeController : MonoBehaviour
 
 
         currentLives = Mathf.Max(0, currentLives - 1); // reduce the players current lives by 1. we're using the math.max here to prevent current lives going below 0.
+        OnLifeLost?.Invoke(); // call the event for stuff that's listening
+
         if (currentLives <= 0) // if the player's current lives are less than or equal to 0...
         {
             isDead = true; // turn on the isDead bool

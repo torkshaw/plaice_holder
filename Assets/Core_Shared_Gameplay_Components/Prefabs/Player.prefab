@@ -292,8 +292,6 @@ GameObject:
   - component: {fileID: 5747461653587202446}
   - component: {fileID: 2761508694839617406}
   - component: {fileID: 5634976150070797071}
-  - component: {fileID: 6667710556454133905}
-  - component: {fileID: 5670606454418466470}
   - component: {fileID: 8935147533239746884}
   m_Layer: 12
   m_Name: Player
@@ -338,12 +336,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae67a051c94b884f917f6b5413342f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1283296659734025421}
   maxMoveSpeed: 8
   acceleration: 60
   deceleration: 80
   airControlMultiplier: 0.6
-  jumpHeight: 3.2
+  jumpHeight: 3.5
   timeToApex: 0.35
   coyoteTime: 0.15
   jumpBufferTime: 0.1
@@ -403,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d976e891d41026428df822d46cf4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLives: 100
+  startingLives: 3
   currentLives: 0
   isDead: 0
   isInvulnerable: 0
@@ -440,6 +438,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundDetector: {fileID: 5993196624989924944}
   requireGroundedToUpdate: 1
+  groundCheckPoint: {fileID: 8470416765911078763}
+  edgeCheckOffset: {x: 0.5, y: 0}
+  edgeCheckSize: {x: 0.15, y: 0.1}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  groundedFramesRequired: 10
+  secondsBetweenSafePositionUpdates: 0.5
   lastSafePosition: {x: 0, y: 0}
 --- !u!114 &5812768220427147021
 MonoBehaviour:
@@ -477,7 +483,7 @@ MonoBehaviour:
   castSnapRadius: 0.25
   hookableMask:
     serializedVersion: 2
-    m_Bits: 3456
+    m_Bits: 19840
   maxLineLength: 12
   reelSpeed: 4
   groundedPlatformReelBuffer: 0.05
@@ -608,69 +614,6 @@ MonoBehaviour:
   flashInterval: 0.05
   knockbackStrength: 14
   knockbackMultiplier: {x: 1, y: 1}
---- !u!70 &6667710556454133905
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909719117465325344}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 16abefd3ba8b05b4d8c89985e936f6f2, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.06736581, y: -0.067365885}
-  m_Size: {x: 0.37713704, y: 0.9389968}
-  m_Direction: 0
---- !u!114 &5670606454418466470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909719117465325344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae67a051c94b884f917f6b5413342f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1283296659734025421}
-  maxMoveSpeed: 8
-  acceleration: 60
-  deceleration: 80
-  airControlMultiplier: 0.6
-  jumpHeight: 3
-  timeToApex: 0.35
-  coyoteTime: 0.15
-  jumpBufferTime: 0.1
-  jumpCutGravityMultiplier: 2
-  fallGravityMultiplier: 2.5
-  apexThreshold: 2
-  apexGravityMultiplier: 0.4
-  maxFallSpeed: -20
 --- !u!60 &8935147533239746884
 PolygonCollider2D:
   m_ObjectHideFlags: 0
