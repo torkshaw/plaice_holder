@@ -21,8 +21,8 @@ public class MusicManager : MonoBehaviour
     private void Awake()
     {        
         musicPlayer = GetComponent<AudioSource>();
-        SceneManager.sceneLoaded += OnSceneLoaded;
         musicPlayer.volume = 0;
+        SceneManager.sceneLoaded += OnSceneLoaded;      
 
     }
 
