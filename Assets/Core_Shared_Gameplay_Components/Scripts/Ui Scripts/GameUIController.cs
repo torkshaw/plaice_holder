@@ -13,6 +13,7 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject pauseMenu; // WJ - pause menu game object
     [SerializeField] private GameObject player; // WJ - player game object    
+    [SerializeField] private GameObject gameHUD; // WJ - gameplay HUD (fish counter, lives text)
     [SerializeField] private PlayerLifeController lifeController; // refence to the lifecontroller, o the script that will call the gameover and respawn envents
     [SerializeField] private string mainMenu = "MainMenu"; // WJ - string for navigation to main menu
     private bool gamePaused = false; // WJ - bool to check if game is paused
@@ -89,9 +90,10 @@ public class GameUIController : MonoBehaviour
 
     private void HandleGameOver()
     {
-        player.SetActive(false); // WJ 19/03 - set player game object inactive
+        player.SetActive(false); // WJ - set player game object inactive
+        gameHUD.SetActive(false); // WJ - set gameplay HUD inactive
         gameOverPanel.SetActive(true); // show game over panel
-        Time.timeScale = 1f; // pause gameplay
+        Time.timeScale = 0f; // pause gameplay
 
     } // end handlegameover
 
