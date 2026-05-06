@@ -319,28 +319,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spooky_arch
-      rect:
-        serializedVersion: 2
-        x: 670
-        y: 1477
-        width: 434
-        height: 391
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d34efe516894e66e0800000000000000
-      internalID: -1842454357305465795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Bulge_small
       rect:
         serializedVersion: 2
@@ -890,6 +868,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SpookyarchLeft
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 1478
+        width: 201
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b096fdb6f0dd1f4eaa3dcef18ac0d7f
+      internalID: 1234419460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpookyArchRight
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1478
+        width: 242
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef1e182b9104e640aa61013e67a56d8
+      internalID: 879449029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -933,7 +955,9 @@ TextureImporter:
       Rubble_tiny_1: -7686568064518841716
       Spike_fat: -6693426389961874124
       Spike_tin: -7235287295042481654
+      SpookyArchRight: 879449029
       Spooky_arch: -1842454357305465795
+      SpookyarchLeft: 1234419460
       Square_rocks_1: 4719681757020926131
       Stalagtite_Small: 8177939682033007459
       Stalagtite_large: -8931023387695895211
