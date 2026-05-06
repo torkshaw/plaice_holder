@@ -1,0 +1,969 @@
+fileFormatVersion: 2
+guid: 1f8191ef12748e045b284e7ba4964a66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8931023387695895211
+    second: CAVES_SpriteSheetV1_0
+  - first:
+      213: 8177939682033007459
+    second: CAVES_SpriteSheetV1_1
+  - first:
+      213: 6241771971898397170
+    second: CAVES_SpriteSheetV1_2
+  - first:
+      213: -4468436996099167823
+    second: CAVES_SpriteSheetV1_3
+  - first:
+      213: 7348862029471986669
+    second: CAVES_SpriteSheetV1_4
+  - first:
+      213: -1842454357305465795
+    second: CAVES_SpriteSheetV1_5
+  - first:
+      213: 2195707980679883527
+    second: CAVES_SpriteSheetV1_6
+  - first:
+      213: 8208075809036868340
+    second: CAVES_SpriteSheetV1_7
+  - first:
+      213: 8016232358861333818
+    second: CAVES_SpriteSheetV1_8
+  - first:
+      213: -6693426389961874124
+    second: CAVES_SpriteSheetV1_9
+  - first:
+      213: -7235287295042481654
+    second: CAVES_SpriteSheetV1_10
+  - first:
+      213: 359837915732238076
+    second: CAVES_SpriteSheetV1_11
+  - first:
+      213: 3247236494541016037
+    second: CAVES_SpriteSheetV1_12
+  - first:
+      213: 2361949108894163221
+    second: CAVES_SpriteSheetV1_13
+  - first:
+      213: 3525270763978686447
+    second: CAVES_SpriteSheetV1_14
+  - first:
+      213: 396721770391849782
+    second: CAVES_SpriteSheetV1_15
+  - first:
+      213: 3158762407798275564
+    second: CAVES_SpriteSheetV1_16
+  - first:
+      213: -8926846688610432383
+    second: CAVES_SpriteSheetV1_17
+  - first:
+      213: 5670388653937877516
+    second: CAVES_SpriteSheetV1_18
+  - first:
+      213: 5557565235692834228
+    second: CAVES_SpriteSheetV1_19
+  - first:
+      213: 7937896563424383
+    second: CAVES_SpriteSheetV1_20
+  - first:
+      213: 3180743922666227543
+    second: CAVES_SpriteSheetV1_21
+  - first:
+      213: -9109801376787444020
+    second: CAVES_SpriteSheetV1_22
+  - first:
+      213: -6930815254270352162
+    second: CAVES_SpriteSheetV1_23
+  - first:
+      213: -8116795836405420242
+    second: CAVES_SpriteSheetV1_24
+  - first:
+      213: -9082697933457200383
+    second: CAVES_SpriteSheetV1_25
+  - first:
+      213: 4719681757020926131
+    second: CAVES_SpriteSheetV1_26
+  - first:
+      213: -7686568064518841716
+    second: CAVES_SpriteSheetV1_27
+  - first:
+      213: -7048721086324906117
+    second: CAVES_SpriteSheetV1_28
+  - first:
+      213: -6410095777900864650
+    second: CAVES_SpriteSheetV1_29
+  - first:
+      213: 3516651308648887047
+    second: CAVES_SpriteSheetV1_30
+  - first:
+      213: -4882575605331074809
+    second: CAVES_SpriteSheetV1_31
+  - first:
+      213: 6171793070558070948
+    second: CAVES_SpriteSheetV1_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stalagtite_large
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1771
+        width: 275
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d2ea72c81ae0480800000000000000
+      internalID: -8931023387695895211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalagtite_Small
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1938
+        width: 118
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bf52eefc0ed7170800000000000000
+      internalID: 8177939682033007459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalagtite_tiny
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 2060
+        width: 41
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f15ef1c98a3f9650800000000000000
+      internalID: 6241771971898397170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar_giant
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1110
+        width: 966
+        height: 1044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9ab421a3cecf1c0800000000000000
+      internalID: -4468436996099167823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_small
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1857
+        width: 70
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3b80274176cf560800000000000000
+      internalID: 7348862029471986669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bulge_small
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1648
+        width: 56
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b2aea66c8b87e10800000000000000
+      internalID: 2195707980679883527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_round
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1693
+        width: 129
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa9e17c571f8e170800000000000000
+      internalID: 8208075809036868340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bulge_long
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 970
+        width: 158
+        height: 662
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35ebeacbd06f3f60800000000000000
+      internalID: 8016232358861333818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_fat
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1414
+        width: 120
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435e810692c2c13a0800000000000000
+      internalID: -6693426389961874124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_tin
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1417
+        width: 55
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0298131a88179b90800000000000000
+      internalID: -7235287295042481654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_small_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1439
+        width: 144
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfedfe78da66ef400800000000000000
+      internalID: 359837915732238076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_tiny_1
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1358
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511ef2d433457c020800000000000000
+      internalID: 2361949108894163221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_small_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1334
+        width: 143
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feff40805174ce030800000000000000
+      internalID: 3525270763978686447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_small_3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1322
+        width: 127
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bced62950718500800000000000000
+      internalID: 396721770391849782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_large_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1138
+        width: 341
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced7cae8cad26db20800000000000000
+      internalID: 3158762407798275564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_large_1
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1142
+        width: 341
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ac001bb387d1480800000000000000
+      internalID: -8926846688610432383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_small_4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 954
+        width: 154
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c026f50107441be40800000000000000
+      internalID: 5670388653937877516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockPile_1
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 955
+        width: 417
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd0889f220702d40800000000000000
+      internalID: 5557565235692834228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_tiny_2
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1019
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c3de099733c1000800000000000000
+      internalID: 7937896563424383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rick_tiny_3
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 990
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757c000deb5442c20800000000000000
+      internalID: 3180743922666227543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_tiny_4
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 961
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce4832e9eb739180800000000000000
+      internalID: -9109801376787444020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_small_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 833
+        width: 146
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10beb1a0a56c3f180800000000000000
+      internalID: -9082697933457200383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_rocks_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 865
+        width: 274
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0bf145d8daf7140800000000000000
+      internalID: 4719681757020926131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubble_tiny_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 867
+        width: 73
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a1e7c0213d35590800000000000000
+      internalID: -7686568064518841716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_horizontal
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 723
+        width: 405
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b776cc88489ed2e90800000000000000
+      internalID: -7048721086324906117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block_large
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 58
+        width: 472
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bdcf52ad3ca07a0800000000000000
+      internalID: -6410095777900864650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal_large
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 17
+        width: 172
+        height: 530
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703fde2bbb7adc030800000000000000
+      internalID: 3516651308648887047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal_small
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 19
+        width: 245
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701e04f1b5b9d3cb0800000000000000
+      internalID: -4882575605331074809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block_small
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 68
+        width: 310
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8c4dd191d96a550800000000000000
+      internalID: 6171793070558070948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 839
+        width: 140
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6689499cee806d848ba7f8cdae66a1fd
+      internalID: 548449778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpookyarchLeft
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 1478
+        width: 201
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b096fdb6f0dd1f4eaa3dcef18ac0d7f
+      internalID: 1234419460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpookyArchRight
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1478
+        width: 242
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef1e182b9104e640aa61013e67a56d8
+      internalID: 879449029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 48b1ad7520ce8f64c81a9a85b760e92a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Block_large: -6410095777900864650
+      Block_small: 6171793070558070948
+      Bulge_long: 8016232358861333818
+      Bulge_small: 2195707980679883527
+      CAVES_SpriteSheetV1_12: 3247236494541016037
+      CAVES_SpriteSheetV1_23: -6930815254270352162
+      CAVES_SpriteSheetV1_24: -8116795836405420242
+      Crystal_large: 3516651308648887047
+      Crystal_small: -4882575605331074809
+      Eyes_1: 548449778
+      Pillar_giant: -4468436996099167823
+      Rick_tiny_3: 3180743922666227543
+      RockPile_1: 5557565235692834228
+      Rock_large_1: -8926846688610432383
+      Rock_large_2: 3158762407798275564
+      Rock_round: 8208075809036868340
+      Rock_small_1: 359837915732238076
+      Rock_small_2: 3525270763978686447
+      Rock_small_4: 5670388653937877516
+      Rock_small_5: -9082697933457200383
+      Rock_tiny_1: 2361949108894163221
+      Rock_tiny_2: 7937896563424383
+      Rock_tiny_4: -9109801376787444020
+      Rocks_horizontal: -7048721086324906117
+      Rocks_small: 7348862029471986669
+      Rocks_small_3: 396721770391849782
+      Rubble_tiny_1: -7686568064518841716
+      Spike_fat: -6693426389961874124
+      Spike_tin: -7235287295042481654
+      SpookyArchRight: 879449029
+      Spooky_arch: -1842454357305465795
+      SpookyarchLeft: 1234419460
+      Square_rocks_1: 4719681757020926131
+      Stalagtite_Small: 8177939682033007459
+      Stalagtite_large: -8931023387695895211
+      Stalagtite_tiny: 6241771971898397170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
