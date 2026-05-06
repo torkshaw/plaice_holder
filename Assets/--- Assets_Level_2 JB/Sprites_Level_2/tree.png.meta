@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: cdc2a489737ad3c40ad27d3c15c65c29
+guid: b9d2f116e38b0c54b966e8ebe2cd6d04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7907467754935096323
-    second: SpookpTree_0
-  - first:
-      213: 6052173369526184978
-    second: SpookpTree_1
+      213: -8667466294985060184
+    second: tree_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,35 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpookpTree_0
+      name: tree_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 473
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfbec32f8f7034290800000000000000
-      internalID: -7907467754935096323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpookpTree_1
-      rect:
-        serializedVersion: 2
-        x: 631
         y: 0
-        width: 190
-        height: 1007
+        width: 127
+        height: 490
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21cefa12d93adf350800000000000000
-      internalID: 6052173369526184978
+      spriteID: 8a09eb0b359f6b780800000000000000
+      internalID: -8667466294985060184
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpookpTree_0: -7907467754935096323
-      SpookpTree_1: 6052173369526184978
+      tree_0: -8667466294985060184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

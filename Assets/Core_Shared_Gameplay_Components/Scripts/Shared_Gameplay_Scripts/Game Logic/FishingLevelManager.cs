@@ -183,7 +183,7 @@ public class FishingLevelManager : MonoBehaviour
             Debug.LogWarning("No Fish Counter UI Assigned");
             return;
         }
-        fishCounter.text = $"{fishCaughtThisLevel} of {fishNeededToCompleteLevel}";
+        fishCounter.text = $"Fish Caught: {fishCaughtThisLevel} of {fishNeededToCompleteLevel}";
 
     }
 
