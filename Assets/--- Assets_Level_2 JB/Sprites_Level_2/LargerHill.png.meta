@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dfae2a4bb1acdb8469fa184e743dae82
+guid: bce772dceac0b9847903c12e4460c00b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -955116501218491275
-    second: FORREST_Hill_Normal_Background_0
+      213: -5832798433995625659
+    second: LargerHill_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FORREST_Hill_Normal_Background_0
+      name: LargerHill_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 0
-        width: 1755
-        height: 526
+        x: 63
+        y: 185
+        width: 836
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57402c14a9ebeb2f0800000000000000
-      internalID: -955116501218491275
+      spriteID: 54b6c3f4abcbd0fa0800000000000000
+      internalID: -5832798433995625659
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FORREST_Hill_Normal_Background_0: -955116501218491275
+      LargerHill_0: -5832798433995625659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

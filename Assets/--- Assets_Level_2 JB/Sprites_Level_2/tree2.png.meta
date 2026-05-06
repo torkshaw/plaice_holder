@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ecacba7029fdc84cbdb1b72dfa1fe30
+guid: d317b8aa852d65241921ca81817b6348
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6959495278647995788
-    second: FORREST_NarrowLinesHill_LC_Normal_Background_0
+      213: -6861365922197683907
+    second: tree2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FORREST_NarrowLinesHill_LC_Normal_Background_0
+      name: tree2_0
       rect:
         serializedVersion: 2
-        x: 140
+        x: 0
         y: 0
-        width: 1754
-        height: 526
+        width: 190
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8d62db3518159060800000000000000
-      internalID: 6959495278647995788
+      spriteID: d31cf6dfb0887c0a0800000000000000
+      internalID: -6861365922197683907
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FORREST_NarrowLinesHill_LC_Normal_Background_0: 6959495278647995788
+      tree2_0: -6861365922197683907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
