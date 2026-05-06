@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bcb5d6cdfc5911a46977797179dd7a41
+guid: 9d0db578cb6e4b047b8cc8167a3b205b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6567852837357056351
-    second: FORREST_Tree_Normal_Medium_0
+      213: 5685471833821105809
+    second: ForegroundSilhouette2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FORREST_Tree_Normal_Medium_0
+      name: ForegroundSilhouette2_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 79
-        width: 708
-        height: 1084
+        x: 0
+        y: 0
+        width: 1316
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ae8a4474ac4ad4a0800000000000000
-      internalID: -6567852837357056351
+      spriteID: 19e456b828ad6ee40800000000000000
+      internalID: 5685471833821105809
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FORREST_Tree_Normal_Medium_0: -6567852837357056351
+      ForegroundSilhouette2_0: 5685471833821105809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

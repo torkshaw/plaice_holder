@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 185dffc17ff8e0545bda7fa4cd20cd16
+guid: 27cc45a2370b88f47b86b2b4d1df8b1c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3422895841946690557
-    second: FORREST_Tree_Medium_Mossy_OnHill 1_0
+      213: 3038089502549650687
+    second: backgroundsquare_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FORREST_Tree_Medium_Mossy_OnHill 1_0
+      name: backgroundsquare_0
       rect:
         serializedVersion: 2
-        x: 23
+        x: 0
         y: 0
-        width: 988
-        height: 1332
+        width: 4096
+        height: 4096
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df3e46a02a1908f20800000000000000
-      internalID: 3422895841946690557
+      spriteID: ffca05b5e46792a20800000000000000
+      internalID: 3038089502549650687
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FORREST_Tree_Medium_Mossy_OnHill 1_0: 3422895841946690557
+      backgroundsquare_0: 3038089502549650687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

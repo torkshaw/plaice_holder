@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c07b451221b451a42ad98c6c7e27f645
+guid: 1abd2e7d68f6b5842aeb1226024b7cd4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9000148510875088256
-    second: BackgroundTest_0
+      213: -6276578923960921189
+    second: spikepit_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackgroundTest_0
+      name: spikepit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 1001
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08a878b3d9c091380800000000000000
-      internalID: -9000148510875088256
+      spriteID: b931b9039bc15e8a0800000000000000
+      internalID: -6276578923960921189
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackgroundTest_0: -9000148510875088256
+      spikepit_0: -6276578923960921189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
