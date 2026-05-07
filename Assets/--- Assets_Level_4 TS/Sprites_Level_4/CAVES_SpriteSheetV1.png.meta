@@ -693,28 +693,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square_rocks_1
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 865
-        width: 274
-        height: 82
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b0bf145d8daf7140800000000000000
-      internalID: 4719681757020926131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Rubble_tiny_1
       rect:
         serializedVersion: 2
@@ -877,7 +855,7 @@ TextureImporter:
         width: 201
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -899,7 +877,7 @@ TextureImporter:
         width: 242
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -908,6 +886,50 @@ TextureImporter:
       bones: []
       spriteID: 8ef1e182b9104e640aa61013e67a56d8
       internalID: 879449029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CAVES_SpriteSheetV1_0
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 866
+        width: 126
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97aabfd0729b1c44a7828ce371b64d7
+      internalID: -891720268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CAVES_SpriteSheetV1_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 867
+        width: 127
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd2590092ca05e49a69f7202bee6cda
+      internalID: 322139001
       vertices: []
       indices: 
       edges: []
@@ -930,6 +952,8 @@ TextureImporter:
       Block_small: 6171793070558070948
       Bulge_long: 8016232358861333818
       Bulge_small: 2195707980679883527
+      CAVES_SpriteSheetV1_0: -891720268
+      CAVES_SpriteSheetV1_1: 322139001
       CAVES_SpriteSheetV1_12: 3247236494541016037
       CAVES_SpriteSheetV1_23: -6930815254270352162
       CAVES_SpriteSheetV1_24: -8116795836405420242
