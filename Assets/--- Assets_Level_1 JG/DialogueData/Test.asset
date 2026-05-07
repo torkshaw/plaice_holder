@@ -21,3 +21,8 @@ MonoBehaviour:
     Goodbye!
 
 '
+  responses:
+  - responseText: Yes
+    dialogueObject: {fileID: 11400000, guid: 7861de2573687224899af114befd214d, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: b4ba3b8ff26754b4ea6a92680be50ed2, type: 2}
