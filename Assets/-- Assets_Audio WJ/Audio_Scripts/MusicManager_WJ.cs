@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using TMPro;
 
 public class MusicManager : MonoBehaviour
 
 {
+    public static MusicManager instance;
     public bool ella_OST;
     public AudioSource musicPlayer;
     [Header("Winter's Music")]
@@ -18,8 +18,19 @@ public class MusicManager : MonoBehaviour
 
 
 
-    private void Awake()
-    {        
+    void Awake()
+    {
+        
+            if (instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        
+
         musicPlayer = GetComponent<AudioSource>();
         musicPlayer.volume = 0;
         SceneManager.sceneLoaded += OnSceneLoaded;      
