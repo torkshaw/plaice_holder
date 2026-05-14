@@ -9868,7 +9868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977572506531378920, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.119
+      value: -0.166
       objectReference: {fileID: 0}
     - target: {fileID: 5977572506531378920, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: m_ConstrainProportionsScale
