@@ -431,8 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8fb5ac7bad15840a188ed625ddd3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: {x: 0.1, y: 0.1}
-  frequency: 1.5
+  amplitude: {x: 0.18, y: 0.15}
+  frequency: 2
   phaseOffset: 0
   randomisePhase: 1
   startEnabled: 1
