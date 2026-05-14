@@ -33,8 +33,12 @@ public class MusicManager : MonoBehaviour
 
         musicPlayer = GetComponent<AudioSource>();
         musicPlayer.volume = 0;
-        SceneManager.sceneLoaded += OnSceneLoaded;      
+           
 
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void SoundtrackToggle()

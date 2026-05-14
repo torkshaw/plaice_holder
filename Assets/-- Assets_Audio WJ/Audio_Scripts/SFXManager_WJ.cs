@@ -1,40 +1,32 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SFXManager : MonoBehaviour
+public class PlayerSFXManager : MonoBehaviour
 {
-    public static SFXManager instance;
-    public AudioSource menuSFXPlayer;    
-    public AudioClip menuButtonClick;
+    public AudioSource playerSFXPlayer;
+    [SerializeField] private AudioClip damageSplash;
+    [SerializeField] private AudioClip damageEnemy;
+    [SerializeField] private PlayerLifeController lifeController;
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        else
-        {
-            instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-
-        menuSFXPlayer = GetComponent<AudioSource>(); 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        playerSFXPlayer = GetComponent<AudioSource>();        
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnEnable()
     {
-        
+        lifeController.DamageTaken += EnemyDamageSFX;
+        lifeController.RespawnRequested += WaterDamageSFX;
     }
 
-    public void MenuButtonSFX()
+    void EnemyDamageSFX(Collider2D sourceCollider, Vector2 hitDirection)
     {
-        menuSFXPlayer.clip = menuButtonClick;
-        menuSFXPlayer.Play();
+        Debug.Log("Enemy Damage SFX Play");
     }
 
+    void WaterDamageSFX()
+    {
+        Debug.Log("Sploosh Damage SFX Play");
+        playerSFXPlayer.PlayOneShot(damageSplash);
+    }
 
 }

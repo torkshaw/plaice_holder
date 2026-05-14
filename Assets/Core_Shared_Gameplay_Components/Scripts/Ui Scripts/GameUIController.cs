@@ -90,7 +90,7 @@ public class GameUIController : MonoBehaviour
 
     private void HandleGameOver()
     {
-        player.SetActive(false); // WJ - set player game object inactive
+        //player.GetComponent<Renderer>().enabled = false; // WJ - hide player sprite inactive
         gameHUD.SetActive(false); // WJ - set gameplay HUD inactive
         gameOverPanel.SetActive(true); // show game over panel
         Time.timeScale = 0f; // pause gameplay

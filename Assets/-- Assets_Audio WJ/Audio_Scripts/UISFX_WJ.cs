@@ -4,7 +4,7 @@ public class UISFX : MonoBehaviour
 {
     public static UISFX instance;
 
-    public AudioSource source;
+    public AudioSource uiSFX;
     public AudioClip click;
 
     void Awake()
@@ -21,6 +21,6 @@ public class UISFX : MonoBehaviour
 
     public void PlayClick()
     {
-        source.PlayOneShot(click);
+        uiSFX.PlayOneShot(click);
     }
 }
