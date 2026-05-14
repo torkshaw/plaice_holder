@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class FishingMinigame : MonoBehaviour
 {
@@ -31,8 +32,13 @@ public class FishingMinigame : MonoBehaviour
     [SerializeField] float failTimer = 10f;
 
     //progress mechanics
-
     [SerializeField] Transform progressBarContainer;
+
+    //achievement mechanics
+    [SerializeField] TMP_Text achievementText;
+    [SerializeField] GameObject AchievementPrefab5FishCaught;
+    [SerializeField] GameObject AchievementPrefab10FishCaught;
+    [SerializeField] GameObject AchievementPrefab15FishCaught;
     private void Update()
     {
         if(pause)
@@ -42,6 +48,7 @@ public class FishingMinigame : MonoBehaviour
         Fish();
         Hook();
         ProgressCheck();
+        
     }
 
     void ProgressCheck()
@@ -118,11 +125,35 @@ public class FishingMinigame : MonoBehaviour
     void Win()
     {
         pause = true;
+
         Debug.Log("YOU WIN");
+
+        int fishCaught = PlayerPrefs.GetInt("FishCaught", 0);
+        fishCaught++;
+
+        PlayerPrefs.SetInt("FishCaught", fishCaught);
+
+        // Achievements
+        if (fishCaught == 5)
+        {
+            ShowAchievement5Fish("Achievement Unlocked: Catch 5 Fish");
+        }
+
+        if (fishCaught == 10)
+        {
+            ShowAchievement10Fish("Achievement Unlocked: Catch 10 Fish");
+        }
+
+        if (fishCaught == 15)
+        {
+            ShowAchievement15Fish("Achievement Unlocked: Catch 15 Fish");
+        }
+
         if (FishingLevelManager.Instance != null)
         {
             FishingLevelManager.Instance.NotifyMinigameWon();
         }
+        //PlayerPrefs.DeleteAll();
     }
     void Lose()
     {
@@ -133,5 +164,40 @@ public class FishingMinigame : MonoBehaviour
         {
             FishingLevelManager.Instance.NotifyMinigameLost();
         }
+    }
+
+    void ShowAchievement5Fish(string message)
+    {
+        GameObject popup = Instantiate(AchievementPrefab5FishCaught);
+
+        Destroy(popup, 3f);
+        
+
+        Invoke(nameof(HideAchievement), 3f);
+    }
+
+    void ShowAchievement10Fish(string message)
+    {
+        GameObject popup = Instantiate(AchievementPrefab10FishCaught);
+
+        Destroy(popup, 3f);
+
+
+        Invoke(nameof(HideAchievement), 3f);
+    }
+
+    void ShowAchievement15Fish(string message)
+    {
+        GameObject popup = Instantiate(AchievementPrefab15FishCaught);
+
+        Destroy(popup, 3f);
+
+
+        Invoke(nameof(HideAchievement), 3f);
+    }
+
+    void HideAchievement()
+    {
+        achievementText.gameObject.SetActive(false);
     }
 }
