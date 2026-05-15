@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 82b0b21779ae84d47a041124fe588260
+guid: 47d50c7ee8f3eb04eb1a32d30c9edf8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 332815931517235265
-    second: EvenLargerHill_0
+      213: -2286632925215327218
+    second: cobbles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EvenLargerHill_0
+      name: cobbles_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 72
-        width: 3312
-        height: 1027
+        x: 0
+        y: 0
+        width: 146
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 140fcad83566e9400800000000000000
-      internalID: 332815931517235265
+      spriteID: e0cf3d8387f3440e0800000000000000
+      internalID: -2286632925215327218
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EvenLargerHill_0: 332815931517235265
+      cobbles_0: -2286632925215327218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

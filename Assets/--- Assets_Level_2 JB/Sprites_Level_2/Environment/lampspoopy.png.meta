@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 82b0b21779ae84d47a041124fe588260
+guid: 7eb0acc2061bca1428253f7d1dbe6060
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 332815931517235265
-    second: EvenLargerHill_0
+      213: -4268318594455274142
+    second: lampspoopy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EvenLargerHill_0
+      name: lampspoopy_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 72
-        width: 3312
-        height: 1027
+        x: 0
+        y: 0
+        width: 159
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 140fcad83566e9400800000000000000
-      internalID: 332815931517235265
+      spriteID: 26d7c455ad2e3c4c0800000000000000
+      internalID: -4268318594455274142
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EvenLargerHill_0: 332815931517235265
+      lampspoopy_0: -4268318594455274142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
