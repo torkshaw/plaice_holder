@@ -1,25 +1,20 @@
 using UnityEngine;
-
+// Script created by Jason 
 public class ParallaxController : MonoBehaviour
 {
-    private float length, startpos; // Variable for asset width and x/y start position
-    public GameObject cam; // Field for the main camera
-    [SerializeField] private float parallaxEffect; // How strong the parallax feels, higher is slower.
+    private float startPos;
+    public GameObject cam;
+    [SerializeField] private float parallaxEffect;
 
     void Start()
     {
-        startpos = transform.position.x; // Assign x position to StartPos
-        length = GetComponent<SpriteRenderer>().bounds.size.x; // Get x length of the sprite (essentially width)
+        startPos = transform.position.x;
     }
 
     void Update()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect)); 
-        float dist = (cam.transform.position.x * parallaxEffect);
-
-        transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
-
-        if (temp > startpos + length) startpos += length;
-        else if (temp < startpos - length) startpos -= length;
+        transform.position = new Vector3(startPos + (cam.transform.position.x * parallaxEffect),
+                                         transform.position.y,
+                                         transform.position.z);
     }
 }
