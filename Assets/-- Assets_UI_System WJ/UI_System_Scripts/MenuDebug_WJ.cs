@@ -2,16 +2,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement; // to allow reloading of scene
 public class MenuDebug : MonoBehaviour
 {
-    [SerializeField] private string levelSelect1;
-    [SerializeField] private string levelSelect2;
-    [SerializeField] private string levelSelect3;
-    [SerializeField] private string levelSelect4;
-    [SerializeField] private string levelSelect5;
+    [SerializeField] private string levelSelect1; //
+    [SerializeField] private string levelSelect2; //
+    [SerializeField] private string levelSelect3; // strings holding the names of each scene level
+    [SerializeField] private string levelSelect4; //
+    [SerializeField] private string levelSelect5; //
 
     private void Update()
     {
         LevelSelect();
-    }
+    }//end update
 
     public void ResetMenu() // Reset the current scene
     {
@@ -19,7 +19,7 @@ public class MenuDebug : MonoBehaviour
 
     } // end ResetMenu
 
-    public void LevelSelect() //checks for F1-F5 key press and loads the relevant level
+    public void LevelSelect() //checks for F1-F5 key press and loads the corresponding level
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
