@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ea168e31691360e469e451d61457d7c3
+guid: c9ca2a9b7cabf6745b34aaf3bdb1fcff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3937663472857103477
-    second: blurryHill_0
+      213: -7797270249656890483
+    second: blurryHill 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blurryHill_0
+      name: blurryHill 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1370
-        height: 425
+        x: 45
+        y: 12
+        width: 1237
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b83425f1feb9a59c0800000000000000
-      internalID: -3937663472857103477
+      spriteID: d8bca7705088ac390800000000000000
+      internalID: -7797270249656890483
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blurryHill_0: -3937663472857103477
+      blurryHill 1_0: -7797270249656890483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

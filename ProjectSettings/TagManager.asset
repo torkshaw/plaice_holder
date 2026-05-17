@@ -70,5 +70,8 @@ TagManager:
   - name: UI
     uniqueID: 4020590373
     locked: 0
+  - name: SortingTexture
+    uniqueID: 3490480287
+    locked: 0
   m_RenderingLayers:
   - Default
