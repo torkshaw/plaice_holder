@@ -19,6 +19,7 @@ public class PlayerLifeController : MonoBehaviour
     [Header("Damage")] // controls for what happens on damage but NOT respawn
     [SerializeField] private float invulnerabilityDuration = 0.75f;
     [SerializeField] private float invulnerabilityTimer;
+                     public static bool godMode = false; //KD -  this is just for testing. it makes the player invulnerable to damage but they can still lose lives from water. this way we can test respawn and game over without worrying about damage stuff.
 
 
     // Functions Start From Here
@@ -65,6 +66,10 @@ public class PlayerLifeController : MonoBehaviour
         // so those things would call either ApplyeHit(true) or ApplyHit(false). and that bool will carry through for this script to use when deciding what to do next.
         // the rest of the stuff we're pulling in is the collider refernece (what hit me), which includes its position and stuff (to allow directional knockback)
     {
+        if (godMode)//KD
+        {
+            return;
+        }
 
         if (isDead) // if the player is dead we do nothing
         {
@@ -126,6 +131,13 @@ public class PlayerLifeController : MonoBehaviour
 
     private void Update() // this is the code that runs every frame
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            godMode = !godMode;
+
+            Debug.Log("God Mode: " + godMode);
+        }
+
         if (!isInvulnerable) return; // if the player is still invulnerable then drop out
         
         invulnerabilityTimer -= Time.deltaTime; // reduce the timer for invulnerability
