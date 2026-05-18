@@ -5696,8 +5696,13 @@ MonoBehaviour:
   ella_OST: 0
   musicPlayer: {fileID: 2849068763789185590}
   musicWinter:
+  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 145bbd6e166d34e40806b8c7df3394c4, type: 3}
   - {fileID: 8300000, guid: f94921631343b364387e5aca9a227730, type: 3}
-  - {fileID: 8300000, guid: a1480aeb636b9594ca1abdba22b07bab, type: 3}
+  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
   musicElla:
   - {fileID: 8300000, guid: 27a3d7fbd82bc384ba700ca1a32dba4e, type: 3}
   - {fileID: 8300000, guid: 0a5293fdacd69cc4692af149c5b46163, type: 3}
