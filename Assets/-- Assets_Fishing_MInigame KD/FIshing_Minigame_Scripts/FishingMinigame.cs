@@ -21,7 +21,7 @@ public class FishingMinigame : MonoBehaviour
     //hook mechanics
     [SerializeField] Transform hook;
     float hookPosition;
-    [SerializeField] float hookSize = 0.1f;
+    [SerializeField] float hookSize = 0.2f;
     [SerializeField] float hookPower = 0.5f;
     float hookProgress;
     float hookPullVelocity;
@@ -30,6 +30,7 @@ public class FishingMinigame : MonoBehaviour
     [SerializeField] float hookProgressDegradationPower = 0.1f;
     bool pause = false;
     [SerializeField] float failTimer = 10f;
+    float normalHookSize;
 
     //progress mechanics
     [SerializeField] Transform progressBarContainer;
@@ -39,16 +40,34 @@ public class FishingMinigame : MonoBehaviour
     [SerializeField] GameObject AchievementPrefab5FishCaught;
     [SerializeField] GameObject AchievementPrefab10FishCaught;
     [SerializeField] GameObject AchievementPrefab15FishCaught;
+
+    void Start()
+    {
+        normalHookSize = hookSize;
+    }
+
     private void Update()
     {
         if(pause)
         {
             return;
         }
+
+        if (PlayerLifeController.godMode)
+        {
+            hookSize = 1f;
+        }
+        else
+        {
+            hookSize = normalHookSize;
+        }
+
         Fish();
         Hook();
         ProgressCheck();
         
+
+
     }
 
     void ProgressCheck()
