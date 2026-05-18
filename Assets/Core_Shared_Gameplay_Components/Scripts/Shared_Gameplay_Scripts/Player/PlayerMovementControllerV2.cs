@@ -38,6 +38,8 @@ public class PlayerMovementControllerV2 : MonoBehaviour
     [SerializeField] private float apexThreshold = 2f; // Threshold for enabling hang time, lower the number = earlier in the jump hang time enables - Jason                         
     [SerializeField] private float apexGravityMultiplier = 0.4f;  // This cuts gravity at the apex of a jump, so when you are at/near the peak of your jump, gravity isn't a strong. Smaller number = More hangtime - Jason
     [SerializeField] private float maxFallSpeed = -20f; // Clamp fall speed - useful for longer drops - Jason
+    [SerializeField] private AudioSource jumpAudio;
+    [SerializeField] private AudioClip jumpSFX;
    
     
     // declare these (private) variables for use in the script
@@ -212,6 +214,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
             jumpBufferTimer = 0f; // then we reset the buffer timer so jump can only happen once per input
             coyoteTimer = 0f; // and we reset coyote timer so jump can only happen once per input
             OnJump?.Invoke(); // call the event for stuff that's listening
+            jumpAudio.PlayOneShot(jumpSFX);
 
         }
 

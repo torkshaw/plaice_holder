@@ -1,40 +1,61 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SFXManager : MonoBehaviour
+public class PlayerSFXManager : MonoBehaviour
 {
-    public static SFXManager instance;
-    public AudioSource menuSFXPlayer;    
-    public AudioClip menuButtonClick;
+    [SerializeField] private PlayerLifeController lifeController; // reference to the PlayerLifeController script
+    //[SerializeField] private PlayerMovementControllerV2 movementController;
+    //[SerializeField] private FishingRodController2D fishingController;
 
-    private void Awake()
+    [SerializeField] private AudioSource playerSFXPlayer; //Audio source for SFX
+
+    [Header("SFX List")]
+    [SerializeField] private AudioClip enemyDamageSFX;  //
+    [SerializeField] private AudioClip waterDamageSFX;  // audio clips for various sfx
+    //[SerializeField] private AudioClip jumpSFX;       //
+    //[SerializeField] private AudioClip hookedSFX;     //
+
+    private void OnEnable()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        else
-        {
-            instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-
-        menuSFXPlayer = GetComponent<AudioSource>(); 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        lifeController.DamageTaken += EnemyDamageSFX;       //
+        lifeController.RespawnRequested += WaterDamageSFX;  //
+        //movementController.OnJump += JumpSFX;             // subscribing to events from scripts and calling functions to play them
+        //fishingController.AttachToObject += HookedSFX;    // sfx beyond basic jump and damage will be added after submission
+        //fishingController.ReelingStarted += ReelSFX;      //
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnDisable()
     {
-        
+        lifeController.DamageTaken -= EnemyDamageSFX;       //
+        lifeController.RespawnRequested -= WaterDamageSFX;  //
+        //movementController.OnJump -= JumpSFX;             // unsubscribing from events
+        //fishingController.AttachToObject -= HookedSFX;    //  
+        //fishingController.ReelingStarted -= ReelSFX;      //
     }
 
-    public void MenuButtonSFX()
+    private void EnemyDamageSFX(Collider2D sourceCollider, Vector2 hitDirection)
     {
-        menuSFXPlayer.clip = menuButtonClick;
-        menuSFXPlayer.Play();
+        playerSFXPlayer.PlayOneShot(enemyDamageSFX);
     }
 
+    private void WaterDamageSFX()
+    {
+        playerSFXPlayer.PlayOneShot(waterDamageSFX);
+    }
 
-}
+    //private void JumpSFX()
+    //{
+    //    playerSFXPlayer.PlayOneShot(jumpSFX);
+    //}
+
+    //private void HookedSFX()
+    //{
+    //    playerSFXPlayer.PlayOneShot(hookedSFX);
+    //}
+
+    //private void ReelSFX()
+    //{
+
+    //}
+
+}//end of class
+//winter james
