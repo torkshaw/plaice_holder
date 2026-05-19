@@ -5,7 +5,6 @@ using System.Collections;
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text textLabel;
-    [SerializeField] private DialogueObject testDialogue;
     [SerializeField] private GameObject dialogueBox;
 
     private ResponseHandler responseHandler;
@@ -17,7 +16,6 @@ public class DialogueUI : MonoBehaviour
         responseHandler = GetComponent<ResponseHandler>();
 
         CloseDialogueBox();
-        ShowDialogue(testDialogue);
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
@@ -50,9 +48,7 @@ public class DialogueUI : MonoBehaviour
             CloseDialogueBox();
         }
 
-
-
-            
+  
     }
 
     private void CloseDialogueBox()
