@@ -50,7 +50,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
     private float jumpVelocity; // jump velocity will be set using jumpHeight and timeToApex
                                 // This seperates jump speed and jump height - i.e. we can now jump faster without going higher and vice versa - Jason
 
-
+    
 
     // BROADCAST EVENTS ---------------------------- Events that fire so other scripts can listen to them and respond (maybe with SFX/FX etc.)
 
@@ -80,8 +80,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
         // Height can now be set seperately - Jason
     }
 
-
-
+    
     private void FixedUpdate() // doing movement in fixedupdate because we're using physics - Tork
     {
 
@@ -101,8 +100,9 @@ public class PlayerMovementControllerV2 : MonoBehaviour
         HandleHorizontalMovement(); // calling the movement funciton instead of putting it in here
         HandleJump(); // calling the jump function from below
         ApplyGravityModifiers(); // this little funciton will do jump-cut and extra gravity for falling
-              
         
+        
+
     } // end fixedupdate
 
 
