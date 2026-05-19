@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 892aa6242387b904c94f67cf376cc2c7
+guid: 12784fcde6068b24ea548cbb500a76f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5527352637866202967
-    second: bigSlabs_0
+      213: -439057661376390681
+    second: Foresy_MossyRock3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 167, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bigSlabs_0
+      name: Foresy_MossyRock3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 421
-        height: 80
+        width: 391
+        height: 182
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 757555060f915bc40800000000000000
-      internalID: 5527352637866202967
+      spriteID: 7e91fb9126728e9f0800000000000000
+      internalID: -439057661376390681
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bigSlabs_0: 5527352637866202967
+      Foresy_MossyRock3_0: -439057661376390681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
