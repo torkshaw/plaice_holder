@@ -118,14 +118,14 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _BodyColor: {r: 0.40566036, g: 0.22005159, b: 0.32183713, a: 0}
+    - _BodyColor: {r: 0.4056604, g: 0.08610717, b: 0.1759815, a: 1}
     - _CausticColor: {r: 0.509434, g: 0.28595588, b: 0.28595588, a: 0}
     - _CausticScrollDir: {r: 0.045, g: 0, b: 0, a: 0}
     - _CausticTiling: {r: 0.5, g: 1.5, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DistortionDir: {r: 0.05, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LineColor: {r: 0.20392159, g: 0.08627451, b: 0.15294118, a: 1}
+    - _LineColor: {r: 0.7169812, g: 0.15603663, b: 0.10484158, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3880663474405988306
