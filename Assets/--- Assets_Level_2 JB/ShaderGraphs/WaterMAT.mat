@@ -116,6 +116,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WaveCount: 0.75
+    - _WaveFlowDirection: 1
+    - _WaveSize: 0.05
+    - _WaveSpeed: 4
     - _ZWrite: 0
     m_Colors:
     - _BodyColor: {r: 0.4056604, g: 0.08610717, b: 0.1759815, a: 1}
