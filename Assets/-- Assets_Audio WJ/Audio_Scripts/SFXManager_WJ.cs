@@ -21,7 +21,7 @@ public class PlayerSFXManager : MonoBehaviour
         //movementController.OnJump += JumpSFX;             // subscribing to events from scripts and calling functions to play them
         //fishingController.AttachToObject += HookedSFX;    // sfx beyond basic jump and damage will be added after submission
         //fishingController.ReelingStarted += ReelSFX;      //
-    }
+    }//end OnEnable
 
     private void OnDisable()
     {
@@ -30,14 +30,14 @@ public class PlayerSFXManager : MonoBehaviour
         //movementController.OnJump -= JumpSFX;             // unsubscribing from events
         //fishingController.AttachToObject -= HookedSFX;    //  
         //fishingController.ReelingStarted -= ReelSFX;      //
-    }
+    }// end OnDisable
 
-    private void EnemyDamageSFX(Collider2D sourceCollider, Vector2 hitDirection)
+    private void EnemyDamageSFX(Collider2D sourceCollider, Vector2 hitDirection) // function called when player takes damage from enemy
     {
         playerSFXPlayer.PlayOneShot(enemyDamageSFX);
     }
 
-    private void WaterDamageSFX()
+    private void WaterDamageSFX() // function called when player takes damage from water
     {
         playerSFXPlayer.PlayOneShot(waterDamageSFX);
     }
