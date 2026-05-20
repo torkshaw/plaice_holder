@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f2be4d6d731c14990e1e265ada1c23, type: 3}
-  m_Name: Bob2Dialogue
+  m_Name: Bob4Dialogue
   m_EditorClassIdentifier: 
   npcName: Bob Green
   npcPortrait: {fileID: -4431272134881128097, guid: 2c3dbcdb3752838418af6a92f13bed33, type: 3}
   dialogueLines:
-  - Try using your rod to hook on to that platform there, Fin!
-  - Left click the platform to hook on, and hold down the right click to reel it
-    in!
-  autoProgressLines: 0100
+  - It's time to start catching fish!
+  - Click the fish to get a bite and your catch box will appear!
+  - The longer you hold the left click down the higher the green catch box will go!
+  - Keep the fish inside the green catch box to fill up your catch meter!
+  - When the catch meter is full, you'll have caught the fish!
+  - Why don't you give it a go...
+  autoProgressLines: 010101010100
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
