@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class DialogueUI : MonoBehaviour
+public class DialogueUI : MonoBehaviour //script by JG
 {
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private DialogueObject testDialogue;

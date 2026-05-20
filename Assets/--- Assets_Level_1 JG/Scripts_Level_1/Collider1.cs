@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class ColliderOne : MonoBehaviour
+public class ColliderOne : MonoBehaviour //script by JG
 {
     public GameObject PopUp1;
 

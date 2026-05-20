@@ -1,4 +1,4 @@
-public interface IInteractable
+public interface IInteractable //script by JG
 {
     void Interact();
 

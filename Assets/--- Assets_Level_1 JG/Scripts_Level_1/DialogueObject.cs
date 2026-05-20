@@ -3,7 +3,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Dialogue/DialogueObject")]
 
-public class DialogueObject : ScriptableObject
+public class DialogueObject : ScriptableObject //script by JG
 {
     [SerializeField][TextArea] private string[] dialogue;
     [SerializeField] private Response[] responses;

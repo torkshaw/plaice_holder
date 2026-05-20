@@ -18,7 +18,8 @@ MonoBehaviour:
   - Try using your rod to hook on to that platform there, Fin!
   - Left click the platform to hook on, and hold down the right click to reel it
     in!
-  autoProgressLines: 0100
+  - When you want to realease the hook, simply click again.
+  autoProgressLines: 010100
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
