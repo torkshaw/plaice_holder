@@ -92,6 +92,7 @@ public class GameUIController : MonoBehaviour
     {
         player.SetActive(false); // WJ - set player game object inactive
         gameHUD.SetActive(false); // WJ - set gameplay HUD inactive
+        MusicManager.instance.GameOverMusic();
         gameOverPanel.SetActive(true); // show game over panel
         Time.timeScale = 0f; // pause gameplay
 
@@ -124,12 +125,14 @@ public class GameUIController : MonoBehaviour
         if (gamePaused == true && gameOverPanel.activeSelf == false) // WJ - checks that the game should be paused and the game over screen is inactive
         {
             pauseMenu.SetActive(true); // WJ - display pause menu
-            Time.timeScale = 0f; // WJ - pause game           
+            Time.timeScale = 0f; // WJ - pause game
+            MusicManager.instance.musicPlayer.volume = 0.2f;//WJ - reduced music player volume from music manager while paused
         }
         else
         {
             pauseMenu.SetActive(false); // WJ - deactivate pause menu
             Time.timeScale = 1f; // WJ - resume game
+            MusicManager.instance.musicPlayer.volume = 0.7f;//WJ - restores music player volume from music manager when exiting pause
         }
 
     }//WJ - end PauseGame
