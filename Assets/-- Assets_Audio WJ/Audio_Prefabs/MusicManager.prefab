@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4fb13b54d0cc5ab4288b5c3cf01203f5, type: 3}
   - {fileID: 8300000, guid: 145bbd6e166d34e40806b8c7df3394c4, type: 3}
   - {fileID: 8300000, guid: 3988399e7a0b71b46916e0f2f0335444, type: 3}
-  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
-  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 07b82f00c3c6901458459267053aa83d, type: 3}
+  - {fileID: 8300000, guid: 4626863c3488b2b4589eb3228f5d8ae0, type: 3}
   gameOverWinter: {fileID: 8300000, guid: 80f48bf4bbcd7864e98fdf5c76fc094b, type: 3}
   musicElla:
   - {fileID: 8300000, guid: 27a3d7fbd82bc384ba700ca1a32dba4e, type: 3}
