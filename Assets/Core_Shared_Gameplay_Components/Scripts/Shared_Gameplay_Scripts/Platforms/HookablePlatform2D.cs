@@ -174,7 +174,7 @@ public class HookablePlatform2D : MonoBehaviour, IHookableTarget2D // here we ne
         if (!hookedByRod.IsLineUnderTension()) // if the line is NOT under tension do nothing. otherwise do the stuff below!
             return;
 
-        Debug.Log("Platform is under tension."); // wee console debug so i can see if tension is occuring
+        // Debug.Log("Platform is under tension."); // wee console debug so i can see if tension is occuring
 
         Vector2 rodPosition = hookedByRod.RodPoint.position; // here we're grabbing the position of the rod this frame. it goes into rodPosition.
                                                              // its just a vector2 here because we don't care about z in 2d.
