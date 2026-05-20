@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f2be4d6d731c14990e1e265ada1c23, type: 3}
+  m_Name: Bob2Dialogue
+  m_EditorClassIdentifier: 
+  npcName: Bob Green
+  npcPortrait: {fileID: -4431272134881128097, guid: 2c3dbcdb3752838418af6a92f13bed33, type: 3}
+  dialogueLines:
+  - Try using your rod to hook on to that platform there, Fin!
+  - Left click the platform to hook on, and hold down the right click to reel it
+    in!
+  autoProgressLines: 0100
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1

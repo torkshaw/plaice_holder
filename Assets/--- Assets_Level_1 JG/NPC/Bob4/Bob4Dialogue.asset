@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f2be4d6d731c14990e1e265ada1c23, type: 3}
+  m_Name: Bob4Dialogue
+  m_EditorClassIdentifier: 
+  npcName: Bob Green
+  npcPortrait: {fileID: -4431272134881128097, guid: 2c3dbcdb3752838418af6a92f13bed33, type: 3}
+  dialogueLines:
+  - It's time to start catching fish!
+  - Click the fish to get a bite and your catch box will appear!
+  - The longer you hold the left click down the higher the green catch box will go!
+  - Keep the fish inside the green catch box to fill up your catch meter!
+  - When the catch meter is full, you'll have caught the fish!
+  - Why don't you give it a go...
+  autoProgressLines: 010101010100
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1

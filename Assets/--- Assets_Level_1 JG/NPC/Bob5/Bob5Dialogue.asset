@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f2be4d6d731c14990e1e265ada1c23, type: 3}
+  m_Name: Bob5Dialogue
+  m_EditorClassIdentifier: 
+  npcName: Bob Green
+  npcPortrait: {fileID: -4431272134881128097, guid: 2c3dbcdb3752838418af6a92f13bed33, type: 3}
+  dialogueLines:
+  - The amount of fish you need to catch for each area of the Dogfish Run is shown
+    in the top right of the screen.
+  - When you catch enough, the portal to the next area will open and you can continue
+    on your journey!
+  - Unfortunately, I can't go with you young Fin, my work is elsewhere...
+  - Good Luck! And always remember ........ you are your father's son!
+  autoProgressLines: 01010100
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1
