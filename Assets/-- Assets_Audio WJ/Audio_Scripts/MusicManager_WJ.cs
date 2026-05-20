@@ -11,11 +11,13 @@ public class MusicManager : MonoBehaviour
 
     [Header("Winter's Music")]// header shown in unity inspector
     public AudioClip[] musicWinter; // array storing winter's soundtracks
+    public AudioClip gameOverWinter;// holds the game over audio
 
 
 
     [Header("Ella's Music")]// header shown in unity inspector
     public AudioClip[] musicElla;// array storing ella's soundtracks
+    public AudioClip gameOverElla;// holds the game over audio
 
 
 
@@ -34,7 +36,7 @@ public class MusicManager : MonoBehaviour
         
 
         musicPlayer = GetComponent<AudioSource>(); //fetches audiosource component attached to object
-        musicPlayer.volume = 0.7f; // initialises audiosource volume (used for testing and mixing)
+        musicPlayer.volume = 0.7f; // initialises audiosource volume at 0.7f (used for mixing sound level)
         SceneManager.sceneLoaded += OnSceneLoaded;      // subscribe to unity scene manager's sceneLoaded event and call OnSceneLoaded function each scene load
 
     }//end awake
@@ -76,7 +78,14 @@ public class MusicManager : MonoBehaviour
         {
             musicPlayer.clip = musicWinter[sceneIndex]; //assigns clip to audiosource
             musicPlayer.Play(); //plays audio source
-            
+            if (sceneIndex == 6)// checks if current scene is scen 6 ie game complete screen
+            {
+                musicPlayer.loop = false; //disable loop
+            }
+            else
+            {
+                musicPlayer.loop = false; //enable looping music for all other game screens
+            }
         }
         else
         {
@@ -92,12 +101,35 @@ public class MusicManager : MonoBehaviour
         {
             musicPlayer.clip = musicElla[sceneIndex];//assigns clip to audiosource
             musicPlayer.Play();//plays audio source
+            if (sceneIndex == 6)// checks if current scene is scen 6 ie game complete screen
+            {
+                musicPlayer.loop = false; //disable loop
+            }
+            else
+            {
+                musicPlayer.loop = true; //enable looping music for all other game screens
+            }
         }
         else
         {
             Debug.Log("No music assigned for scene"); //outputs to debug log if no music clip exists for current scene
         }
     }// end PlaySceneMusicElla
+
+    public void GameOverMusic()
+    {
+        musicPlayer.loop = false;
+        if (ella_OST == false) // checks bool value
+        {
+            musicPlayer.clip = gameOverWinter;
+            musicPlayer.Play();
+        }
+        else 
+        {
+            musicPlayer.clip = gameOverElla;
+            musicPlayer.Play();
+        }
+    }
 
 }// end of class
 // winter james

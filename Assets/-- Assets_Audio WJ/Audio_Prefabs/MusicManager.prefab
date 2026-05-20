@@ -50,11 +50,12 @@ MonoBehaviour:
   musicWinter:
   - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
   - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
-  - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  - {fileID: 8300000, guid: 4fb13b54d0cc5ab4288b5c3cf01203f5, type: 3}
   - {fileID: 8300000, guid: 145bbd6e166d34e40806b8c7df3394c4, type: 3}
   - {fileID: 8300000, guid: 3988399e7a0b71b46916e0f2f0335444, type: 3}
   - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
   - {fileID: 8300000, guid: 1a4732601eb949545b237c121823d191, type: 3}
+  gameOverWinter: {fileID: 8300000, guid: 80f48bf4bbcd7864e98fdf5c76fc094b, type: 3}
   musicElla:
   - {fileID: 8300000, guid: 27a3d7fbd82bc384ba700ca1a32dba4e, type: 3}
   - {fileID: 8300000, guid: 0a5293fdacd69cc4692af149c5b46163, type: 3}
@@ -63,6 +64,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00f70b59a511db6448a076ea64bd3c16, type: 3}
   - {fileID: 8300000, guid: c26414efdea611b4aaf00fb7df4913be, type: 3}
   - {fileID: 8300000, guid: 0ae23d118c83b85449ae20afc1220bdb, type: 3}
+  gameOverElla: {fileID: 8300000, guid: cc6f43a5f3ddd4a4a9d1f29de662f5cf, type: 3}
 --- !u!82 &7440365008121602041
 AudioSource:
   m_ObjectHideFlags: 0
