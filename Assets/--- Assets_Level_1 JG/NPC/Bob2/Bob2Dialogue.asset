@@ -10,20 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f2be4d6d731c14990e1e265ada1c23, type: 3}
-  m_Name: BobGreenDialogue
+  m_Name: Bob2Dialogue
   m_EditorClassIdentifier: 
   npcName: Bob Green
   npcPortrait: {fileID: -4431272134881128097, guid: 2c3dbcdb3752838418af6a92f13bed33, type: 3}
   dialogueLines:
-  - Hello Fin!
-  - Your father was the greatest angler I ever knew...
-  - He set out on the Dogfish Run in search of the famous Rainbow Plaice and was
-    never heard from or seen again.
-  - Now his rod passes to you, you are the last of that bloodline, there is no other!
-  - Put aside the boy. Become the Angler you were born to be.
-  - Complete the Dogfish Run!
-  autoProgressLines: 010101010100
+  - Try using your rod to hook on to that platform there, Fin!
+  autoProgressLines: 00
   autoProgressDelay: 1.5
   typingSpeed: 0.05
-  voiceSound: {fileID: 8300000, guid: d704ebb82a2d6604e8823bdd3b193991, type: 3}
+  voiceSound: {fileID: 0}
   voicePitch: 1
