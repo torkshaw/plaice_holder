@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InteractionDetector : MonoBehaviour
+public class InteractionDetector : MonoBehaviour //script by JG
 {
     private IInteractable interactableInRange = null;
     public GameObject interactionIcon;

@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 
-public class NPC : MonoBehaviour, IInteractable
+public class NPC : MonoBehaviour, IInteractable //script by JG
 {
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
