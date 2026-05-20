@@ -96,6 +96,37 @@ public class PlayerMovementControllerV2 : MonoBehaviour
                 return;
             }
         }
+
+        // GOD MODE FLYING - KD
+        if (PlayerLifeController.godMode)
+        {
+            rb.gravityScale = 0f;
+
+            Vector2 flyMovement = Vector2.zero;
+
+            if (Input.GetKey(KeyCode.W))
+                flyMovement.y += 1;
+
+            if (Input.GetKey(KeyCode.S))
+                flyMovement.y -= 1;
+
+            if (Input.GetKey(KeyCode.A))
+                flyMovement.x -= 1;
+
+            if (Input.GetKey(KeyCode.D))
+                flyMovement.x += 1;
+
+            rb.linearVelocity = flyMovement * 10f;
+
+            return;
+        }
+
+        // Restore gravity when god mode is OFF
+        float gravityStrength = (2f * jumpHeight) / (timeToApex * timeToApex);
+        rb.gravityScale = gravityStrength / Mathf.Abs(Physics2D.gravity.y);
+
+
+
         // then we run all the normal movement stuff - Tork
         UpdateJumpTimers(); // each physics frame we want to update the coyote and grace timers
         HandleHorizontalMovement(); // calling the movement funciton instead of putting it in here
