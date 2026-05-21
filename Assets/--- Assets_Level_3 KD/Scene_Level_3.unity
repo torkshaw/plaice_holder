@@ -1403,7 +1403,7 @@ PrefabInstance:
       objectReference: {fileID: 40619125}
     - target: {fileID: 2508339854850977407, guid: 3d0b68f0d4bad794f81efec97cf4e3ef, type: 3}
       propertyPath: fishNeededToCompleteLevel
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4530137421381922358, guid: 3d0b68f0d4bad794f81efec97cf4e3ef, type: 3}
       propertyPath: m_Name
@@ -5899,7 +5899,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.15475555, b: 0.5031446, a: 1}
   m_Origin: {x: -23, y: -8, z: 0}
   m_Size: {x: 182, y: 85, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

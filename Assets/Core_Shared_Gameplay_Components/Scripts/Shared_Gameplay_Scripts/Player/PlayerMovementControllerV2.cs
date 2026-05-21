@@ -235,7 +235,7 @@ public class PlayerMovementControllerV2 : MonoBehaviour
     private void HandleJump() // this is what actually does the jump called from Fixedupdate
     {
 
-        if (jumpBufferTimer > 0f && coyoteTimer > 0f) // check to see if both buffer timer and coyotetimer (and implicity 'isGrounded') have time left
+        if ((jumpBufferTimer > 0f && coyoteTimer > 0f) || PlayerLifeController.godMode) // check to see if both buffer timer and coyotetimer (and implicity 'isGrounded') have time left
         {
 
             Vector2 velocity = rb.linearVelocity; // here we're getring the rb velocity of the player again
