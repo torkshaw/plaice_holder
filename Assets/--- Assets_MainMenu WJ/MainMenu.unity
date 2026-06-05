@@ -1888,8 +1888,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits\n\nCreated, programmed and designed by:\n\nJason Bennett\tJohn
-    Griffin\n\nKai Davidson\tTork Shaw\n\nWinter James\n\nFull Credits in Game Documentation"
+  m_text: "Credits\n\nCreated, programmed and designed by:\nJason Bennett\tJohn Griffin\nKai
+    Davidson\tTork Shaw\nWinter James\n\nSoundtrack:\nElla Cookson\n\nFull Credits
+    in Game Documentation"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87e79bd4d91c12946b47eb67e100ba88, type: 2}
   m_sharedMaterial: {fileID: -7664937458235978400, guid: 87e79bd4d91c12946b47eb67e100ba88, type: 2}
