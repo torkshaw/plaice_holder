@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581009876}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuDebug, Assembly-CSharp
         m_MethodName: ResetMenu
         m_Mode: 1
@@ -1157,14 +1157,13 @@ GameObject:
   - component: {fileID: 581009875}
   - component: {fileID: 581009874}
   - component: {fileID: 581009873}
-  - component: {fileID: 581009876}
   m_Layer: 5
   m_Name: debugcanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &581009872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1249,23 +1248,6 @@ Canvas:
   m_SortingLayerID: -274376923
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &581009876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581009871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee367085583c06a4cb5e882052855dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelSelect1: Scene_Level_1
-  levelSelect2: Scene_Level_2
-  levelSelect3: Scene_Level_3
-  levelSelect4: Scene_Level_4
-  levelSelect5: Scene_Level_5
 --- !u!1 &593099287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,8 +1871,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits\n\nCreated, programmed and designed by:\nJason Bennett\tJohn Griffin\nKai
-    Davidson\tTork Shaw\nWinter James\n\nSoundtrack:\nElla Cookson\n\nFull Credits
-    in Game Documentation"
+    Davidson\tTork Shaw\nWinter James\n\nSoundtracks:\nElla Cookson / Winter James\n\nFull
+    Credits in Game Documentation"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87e79bd4d91c12946b47eb67e100ba88, type: 2}
   m_sharedMaterial: {fileID: -7664937458235978400, guid: 87e79bd4d91c12946b47eb67e100ba88, type: 2}
@@ -2847,7 +2829,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 136597573}
-  - {fileID: 1478262638}
   m_Father: {fileID: 1140198870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2983,6 +2964,7 @@ RectTransform:
   m_Children:
   - {fileID: 205430077}
   - {fileID: 729889000}
+  - {fileID: 1478262638}
   - {fileID: 1099450013}
   m_Father: {fileID: 593099290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3337,6 +3319,7 @@ GameObject:
   - component: {fileID: 1373165845}
   - component: {fileID: 1373165848}
   - component: {fileID: 1373165849}
+  - component: {fileID: 1373165850}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -3500,6 +3483,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4843273b7fbbbf548a7d58172869e7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1373165850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373165843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee367085583c06a4cb5e882052855dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSelect1: Scene_Level_1
+  levelSelect2: Scene_Level_2
+  levelSelect3: Scene_Level_3
+  levelSelect4: Scene_Level_4
+  levelSelect5: Scene_Level_5
 --- !u!1 &1450318563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,16 +3627,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478262637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 18000}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1099450013}
+  m_Father: {fileID: 1140198870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28.1}
+  m_AnchoredPosition: {x: 0, y: -3.0999928}
   m_SizeDelta: {x: 401.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478262639

@@ -100455,7 +100455,7 @@ PrefabInstance:
     - target: {fileID: 8052840662552125593, guid: 10c7691100de0fa428010c70c4295997, type: 3}
       propertyPath: jumpAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1963495543}
     m_RemovedComponents:
     - {fileID: 864271343379950298, guid: 10c7691100de0fa428010c70c4295997, type: 3}
     m_RemovedGameObjects: []
@@ -100465,6 +100465,11 @@ PrefabInstance:
       addedObject: {fileID: 1449032125}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+--- !u!82 &1963495543 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4205226789224759940, guid: 10c7691100de0fa428010c70c4295997, type: 3}
+  m_PrefabInstance: {fileID: 1963495542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1966912843
 GameObject:
   m_ObjectHideFlags: 0

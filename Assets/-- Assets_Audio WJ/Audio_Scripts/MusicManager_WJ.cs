@@ -72,7 +72,7 @@ public class MusicManager : MonoBehaviour
 
     void PlaySceneMusicWinter() // function to play winter's soundtrack
     {
-
+        musicPlayer.volume = 0.7f;
         int sceneIndex = SceneManager.GetActiveScene().buildIndex; // fetches the currently active scene's build index
         if (sceneIndex < musicWinter.Length) //checks if a music track exists for the current scene index
         {
@@ -84,7 +84,7 @@ public class MusicManager : MonoBehaviour
             }
             else
             {
-                musicPlayer.loop = false; //enable looping music for all other game screens
+                musicPlayer.loop = true; //enable looping music for all other game screens
             }
         }
         else
@@ -95,7 +95,7 @@ public class MusicManager : MonoBehaviour
 
     void PlaySceneMusicElla() // function to play ella's soundtrack
     {
-
+        musicPlayer.volume = 0.5f;
         int sceneIndex = SceneManager.GetActiveScene().buildIndex; // fetches the currently active scene's build index
         if (sceneIndex < musicElla.Length) //checks if a music track exists for the current scene index
         {
